@@ -18,17 +18,10 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<div class="grain"></div>
-<div class="bg-orbs" aria-hidden="true">
-  <span class="orb orb-1"></span>
-  <span class="orb orb-2"></span>
-  <span class="orb orb-3"></span>
-</div>
 
 <a class="skip-link" href="#main">Skip to content</a>
 
@@ -88,8 +81,8 @@
           <dd>Applied AI · exp. Sept 2026</dd>
         </div>
         <div>
-          <dt>3</dt>
-          <dd>full-stack AI systems shipped</dd>
+          <dt>4</dt>
+          <dd>AI products built end to end</dd>
         </div>
       </dl>
     </div>
@@ -155,49 +148,53 @@
         Building <a href="https://lorekeeper.quest" target="_blank" rel="noopener" class="text-gradient link-underline">Lorekeeper.quest</a>
       </h2>
       <p class="section-lede reveal">
-        Lorekeeper.quest is my M.S. capstone project — a live, evolving system that takes a body of
-        raw data all the way to an AI-powered, user-facing product. It's the single project where
-        every stage below had to work together, not just in isolation.
+        Lorekeeper is my M.S. capstone — an open-source, self-hosted AI campaign companion for
+        tabletop RPGs, built end to end: a LoRA fine-tune of Mistral 7B trained on session-journal
+        data across 12 game systems, hybrid retrieval-augmented generation over the user's own
+        campaign records, and an evaluation harness that measures both the model and the retrieval
+        layer. No external AI APIs — the whole stack runs on the user's hardware.
       </p>
 
       <div class="capstone-cta reveal">
         <a href="https://lorekeeper.quest" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
           Explore the live project <span aria-hidden="true">↗</span>
         </a>
-        <span class="status-pill"><span class="status-dot"></span> Actively in development</span>
+        <a href="https://github.com/hsmith-dev/Lorekeeper.quest" target="_blank" rel="noopener" class="btn btn-ghost">Source on GitHub</a>
+        <a href="https://huggingface.co/harrisonsmith/Lorekeeper-Mistral-7B-GGUF" target="_blank" rel="noopener" class="btn btn-ghost">Model on Hugging Face</a>
+        <span class="status-pill"><span class="status-dot"></span> Live &amp; open source (AGPL-3.0)</span>
       </div>
 
       <!-- Pipeline -->
       <div class="pipeline reveal" role="list" aria-label="Capstone development pipeline">
         <div class="pipeline-step" role="listitem">
           <span class="pipeline-num">01</span>
-          <h3>ETL &amp; Ingestion</h3>
-          <p>Designed pipelines to pull raw source data in reliably and repeatably, treating ingestion as production infrastructure rather than a one-off script.</p>
+          <h3>Training Data</h3>
+          <p>Built the session-journal training corpus across 12 tabletop game systems — fantasy, sci-fi, horror — with cleaning and formatting pipelines that made fine-tuning trustworthy.</p>
         </div>
         <div class="pipeline-step" role="listitem">
           <span class="pipeline-num">02</span>
-          <h3>Data Cleaning</h3>
-          <p>Sanitized and normalized messy, inconsistent source data — the unglamorous work that determines whether anything downstream can be trusted.</p>
+          <h3>Fine-Tuning</h3>
+          <p>LoRA fine-tune of Mistral 7B Instruct, merged and quantized to Q4 GGUF — a 4&nbsp;GB model that runs on consumer hardware, published openly on Hugging Face.</p>
         </div>
         <div class="pipeline-step" role="listitem">
           <span class="pipeline-num">03</span>
-          <h3>Data Preparation</h3>
-          <p>Engineered features and structured schemas purpose-built for both model training and fast, RAG-ready retrieval.</p>
+          <h3>Hybrid RAG</h3>
+          <p>Semantic vector search (pgvector) fused with full-text keyword search via Reciprocal Rank Fusion — embeddings handle paraphrase, keywords rescue the rare proper nouns they blur.</p>
         </div>
         <div class="pipeline-step" role="listitem">
           <span class="pipeline-num">04</span>
-          <h3>Model Training</h3>
-          <p>Trained and evaluated models against real accuracy metrics — iterating on what "good enough" means for a production feature, not a notebook demo.</p>
+          <h3>Measured Relevance</h3>
+          <p>The retrieval gate's threshold is set by a labeled evaluation sweep, not guessed — and when nothing relevant exists, the app labels its own reply as ungrounded instead of inventing.</p>
         </div>
         <div class="pipeline-step" role="listitem">
           <span class="pipeline-num">05</span>
-          <h3>Visualization</h3>
-          <p>Turned pipeline and model output into interfaces people can actually read and act on — the same discipline behind executive dashboards, applied to a consumer product.</p>
+          <h3>Evaluation Harness</h3>
+          <p>In-app model comparison (fine-tuned vs. base) with semantic-similarity scoring, plus a standalone retrieval benchmark — quality is measured at both layers, continuously.</p>
         </div>
         <div class="pipeline-step" role="listitem">
           <span class="pipeline-num">06</span>
-          <h3>AI Orchestration &amp; RAG</h3>
-          <p>Implemented retrieval-augmented generation and multi-step orchestration logic so the system reasons over prepared data instead of hallucinating around it.</p>
+          <h3>Production &amp; Transparency</h3>
+          <p>Dockerized full stack (FastAPI, React, Postgres, Ollama) with token streaming and a per-answer retrieval trace — every reply shows which records it drew from and why.</p>
         </div>
       </div>
 
@@ -237,7 +234,25 @@
             observability, not just a chat demo.
           </p>
           <ul class="tag-list">
-            <li>AutoGen</li><li>Multi-agent orchestration</li><li>FastAPI</li><li>Sandboxed tool execution</li>
+            <li>AutoGen</li><li>Multi-agent orchestration</li><li>FastAPI</li><li>Sandboxed tool execution</li><li>MIT-licensed</li>
+          </ul>
+          <div class="card-links">
+            <a href="https://ogden.harrisonsmith.ai" target="_blank" rel="noopener">ogden.harrisonsmith.ai ↗</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon" aria-hidden="true">◎</div>
+          <h3>Hermit — Local-AI Note Companion <span class="badge-wip">In development</span></h3>
+          <p>
+            A native note-taking companion for iOS, iPadOS, macOS, and watchOS with an
+            on-device AI layer — capture, organize, and converse with your notes without
+            your thoughts ever leaving your hardware. The same local-first AI conviction
+            behind Lorekeeper, brought to the Apple ecosystem: private by architecture,
+            not by policy.
+          </p>
+          <ul class="tag-list">
+            <li>Swift / SwiftUI</li><li>iOS · iPadOS · macOS · watchOS</li><li>On-device LLM</li><li>Local-first</li>
           </ul>
         </article>
 
@@ -415,6 +430,10 @@
         <a class="contact-item" href="https://linkedin.com/in/hsmith-dev" target="_blank" rel="noopener">
           <span class="contact-label">LinkedIn</span>
           <span class="contact-value">linkedin.com/in/hsmith-dev</span>
+        </a>
+        <a class="contact-item" href="https://github.com/hsmith-dev" target="_blank" rel="noopener">
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/hsmith-dev</span>
         </a>
         <a class="contact-item" href="https://lorekeeper.quest" target="_blank" rel="noopener">
           <span class="contact-label">Capstone Project</span>
