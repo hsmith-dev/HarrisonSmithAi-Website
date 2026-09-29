@@ -10,8 +10,9 @@ the custom domain `harrisonsmith.ai`.
 index.html        Single-page site (Hero, About, Capstone, Systems Built,
                    Experience, Skills, Teaching, Contact)
 css/style.css      Design system + layout
-js/main.js         Nav toggle, scroll-reveal animations, active-link state
-assets/            Resume PDF, favicon
+js/main.js         Menu, skills tabs, GSAP scroll choreography (loaded
+                   from cdnjs; the page stays fully readable without it)
+assets/            Resume PDF, favicon, og-image.png, work/ screenshots
 404.html           Branded not-found page (served by GitHub Pages)
 CNAME              Custom domain for GitHub Pages
 .nojekyll          Disables Jekyll processing

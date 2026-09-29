@@ -6,6 +6,8 @@
 <title>Harrison Smith | AI Engineer &amp; Educator</title>
 <meta name="description" content="Harrison Smith is an AI engineer building RAG pipelines, LLM orchestration, and ML data systems. M.S. in Applied AI, capstone project Lorekeeper.quest. Available for AI development and teaching.">
 <meta name="author" content="Harrison Smith">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#07070a">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Harrison Smith | AI Engineer &amp; Educator">
@@ -14,144 +16,164 @@
 <meta property="og:url" content="https://harrisonsmith.ai">
 <meta property="og:image" content="https://harrisonsmith.ai/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0f0f11" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f4f4f5" media="(prefers-color-scheme: light)">
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/light/style.css">
+<link rel="preload" as="image" href="assets/work/lorekeeper.jpg">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
 
-<header class="site-header" id="site-header">
-  <div class="wrap header-inner">
-    <a href="#home" class="brand" aria-label="Harrison Smith, home">
-      <span class="brand-mark" aria-hidden="true">HS<span class="dot">.</span>ai</span>
-    </a>
-
-    <nav class="nav" id="nav" aria-label="Primary">
+<!-- ================= NAV: floating glass pill ================= -->
+<header class="nav-shell" id="site-header">
+  <div class="nav-pill">
+    <a href="#home" class="brand" aria-label="Harrison Smith, home">HS<span>.</span>ai</a>
+    <nav class="nav" aria-label="Primary">
       <a href="#about">About</a>
       <a href="#capstone">Capstone</a>
       <a href="#work">Systems</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
       <a href="#teaching">Teaching</a>
-      <a href="#contact" class="nav-cta">Contact</a>
     </nav>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">
+    <a href="#contact" class="nav-cta">Contact</a>
+    <button class="burger" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
       <span></span><span></span>
     </button>
   </div>
 </header>
 
+<div class="menu" id="menu" aria-hidden="true">
+  <nav class="menu-links" aria-label="Mobile">
+    <a href="#about">About</a>
+    <a href="#capstone">Capstone</a>
+    <a href="#work">Systems</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</div>
+
 <main id="main">
 
   <!-- ================= HERO ================= -->
   <section class="hero" id="home">
-    <div class="wrap hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow reveal">M.S. Applied AI, Neumont University</p>
-        <h1 class="hero-title reveal">
-          Harrison Smith builds <span class="accent">AI systems that ship.</span>
-        </h1>
-        <p class="hero-sub reveal">
-          Ten years of software engineering, now focused on RAG, LLM orchestration,
-          and the data pipelines that make them trustworthy.
-        </p>
-        <div class="hero-actions reveal">
-          <a href="#contact" class="btn btn-primary">Get in touch</a>
-          <a href="assets/Harrison_Smith_Resume.pdf" target="_blank" class="btn-link">Résumé (PDF) <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
+    <div class="hero-bg" aria-hidden="true">
+      <span class="orb orb-a"></span>
+      <span class="orb orb-b"></span>
+      <span class="orb orb-c"></span>
+      <span class="hero-grid-lines"></span>
+    </div>
 
-      <aside class="now reveal" aria-labelledby="now-title">
-        <h2 class="now-title" id="now-title">Currently building</h2>
-        <ul class="now-list">
-          <li>
-            <a href="https://lorekeeper.quest" target="_blank" rel="noopener">
-              <span class="now-name">Lorekeeper.quest <span aria-hidden="true">↗</span></span>
-              <span class="now-desc">Graduate capstone. A fine-tuned Mistral 7B with hybrid RAG, fully self-hosted.</span>
-            </a>
-          </li>
-          <li>
-            <a href="https://ogden.harrisonsmith.ai" target="_blank" rel="noopener">
-              <span class="now-name">Ogden <span aria-hidden="true">↗</span></span>
-              <span class="now-desc">A multi-agent platform where AI personas work a real project backlog.</span>
-            </a>
-          </li>
-          <li>
-            <a href="#experience">
-              <span class="now-name">Blytz</span>
-              <span class="now-desc">BI pipelines for executives, plus evaluation of a production AI agent.</span>
-            </a>
-          </li>
-        </ul>
-      </aside>
+    <div class="wrap hero-inner">
+      <p class="pill hero-pill" data-hero><span class="pill-dot" aria-hidden="true"></span>M.S. Applied AI, Neumont University</p>
+      <h1 class="hero-title" data-split>Harrison Smith builds <em>AI systems</em> that ship.</h1>
+      <p class="hero-sub" data-hero>
+        Ten years of software engineering, now focused on RAG, LLM orchestration,
+        and the data pipelines that make them trustworthy.
+      </p>
+      <div class="hero-actions" data-hero>
+        <a href="#contact" class="btn btn-solid">
+          Get in touch
+          <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-arrow-up-right"></i></span>
+        </a>
+        <a href="#work" class="btn btn-glass">
+          Explore the work
+          <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-arrow-down"></i></span>
+        </a>
+      </div>
+    </div>
+
+    <div class="wrap hero-stage">
+      <a class="bezel stage-frame" id="stageFrame" href="https://lorekeeper.quest" target="_blank" rel="noopener" aria-label="Lorekeeper.quest, live site">
+        <div class="bezel-core">
+          <div class="stage-bar" aria-hidden="true"><em>lorekeeper.quest</em></div>
+          <img src="assets/work/lorekeeper.jpg" width="2160" height="1350"
+               alt="The Lorekeeper.quest landing page: 'The AI campaign companion that remembers your world', beside a campaign chat that cites its source journal entry.">
+        </div>
+      </a>
     </div>
   </section>
 
+  <!-- ================= MARQUEE ================= -->
+  <div class="marquee" aria-label="Core stack">
+    <div class="marquee-track">
+      <ul>
+        <li>Retrieval-augmented generation</li><li>LoRA fine-tuning</li><li>pgvector</li><li>Multi-agent orchestration</li><li>Ollama</li><li>Evaluation harnesses</li><li>FastAPI</li><li>BigQuery</li><li>PyTorch</li>
+      </ul>
+      <ul aria-hidden="true">
+        <li>Retrieval-augmented generation</li><li>LoRA fine-tuning</li><li>pgvector</li><li>Multi-agent orchestration</li><li>Ollama</li><li>Evaluation harnesses</li><li>FastAPI</li><li>BigQuery</li><li>PyTorch</li>
+      </ul>
+    </div>
+  </div>
+
   <!-- ================= ABOUT ================= -->
   <section class="section" id="about">
-    <div class="wrap about-grid">
-      <div class="about-main">
-        <h2 class="section-title reveal">From production software to production AI</h2>
+    <div class="wrap">
+      <h2 class="visually-hidden">About</h2>
+      <p class="statement" data-scrub>
+        I spent a decade writing production software. Now I build the AI that runs on it:
+        retrieval pipelines, fine-tuned models, and the evaluation that proves they work.
+      </p>
+
+      <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            I'm an AI-focused engineer based in Ogden, Utah, working daily where model behavior
-            meets deployable software. My background is classic software engineering: backend
-            services, SQL systems, CI/CD pipelines. For the past several years I've been deliberately
-            rebuilding that foundation around AI, with RAG pipelines, multi-model orchestration
+            I'm an AI-focused engineer based in Ogden, Utah. My background is classic software
+            engineering: backend services, SQL systems, CI/CD pipelines. For the past several years
+            I've rebuilt that foundation around AI, with RAG pipelines, multi-model orchestration
             across Claude, Gemini, and ChatGPT, local LLM hosting, and the ML data work that makes
             any of it trustworthy.
           </p>
           <p>
-            My M.S. in Applied Artificial Intelligence at Neumont University has been the forcing
-            function to go deep on the parts of the stack a bootcamp skips: full ETL pipeline design,
-            data sanitization, model training and evaluation in TensorFlow and PyTorch, and the
-            statistics behind knowing whether a model is actually working. I pair that coursework with
-            real production responsibility, validating a live AI agent at Blytz and shipping data
-            pipelines that executives actually read.
+            My M.S. in Applied AI pushed me deep into the parts a bootcamp skips: ETL design, data
+            sanitization, model training and evaluation in TensorFlow and PyTorch, and the statistics
+            behind knowing whether a model actually works. I pair that with real production
+            responsibility, validating a live AI agent at Blytz.
           </p>
           <p>
-            I build with AI-assisted tooling as a first-class part of my workflow, <strong>Claude Code</strong>
-            in particular. Not to skip the engineering, but to move faster through it while staying
-            accountable for every architectural decision underneath.
+            I build with <strong>Claude Code</strong> as a first-class part of my workflow. Not to skip
+            the engineering, but to move faster through it while staying accountable for every
+            architectural decision underneath.
           </p>
         </div>
-      </div>
 
-      <div class="about-side reveal">
-        <dl class="stats">
-          <div>
-            <dt>10+ yrs</dt>
-            <dd>combined technical experience</dd>
-          </div>
-          <div>
-            <dt>4</dt>
-            <dd>AI products built end to end</dd>
-          </div>
-        </dl>
-
-        <div class="edu">
-          <div class="edu-item">
-            <span class="edu-year">2026</span>
-            <div>
-              <h3>M.S., Applied Artificial Intelligence</h3>
-              <p>Neumont University, Salt Lake City</p>
-              <p class="muted">Model training and evaluation (TensorFlow, PyTorch, ML.NET), RAG architecture, full ETL and data-sanitization coursework.</p>
+        <div class="facts">
+          <div class="bezel reveal">
+            <div class="bezel-core fact">
+              <span class="fact-num">10+</span>
+              <span class="fact-label">years of combined technical experience</span>
             </div>
           </div>
-          <div class="edu-item">
-            <span class="edu-year">2022</span>
-            <div>
-              <h3>B.S., Computer Science</h3>
-              <p>Weber State University, Ogden</p>
-              <p class="muted">Graduate-level data science coursework as an undergraduate: data cleaning, predictive modeling, mathematical frameworks.</p>
+          <div class="bezel reveal">
+            <div class="bezel-core fact">
+              <span class="fact-num">4</span>
+              <span class="fact-label">AI products built end to end</span>
+            </div>
+          </div>
+          <div class="bezel facts-wide reveal">
+            <div class="bezel-core edu">
+              <div class="edu-row">
+                <span class="edu-year">2026</span>
+                <div>
+                  <h3>M.S., Applied Artificial Intelligence</h3>
+                  <p>Neumont University. Model training and evaluation, RAG architecture, ETL and data sanitization.</p>
+                </div>
+              </div>
+              <div class="edu-row">
+                <span class="edu-year">2022</span>
+                <div>
+                  <h3>B.S., Computer Science</h3>
+                  <p>Weber State University. Graduate-level data science coursework as an undergraduate.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -160,309 +182,324 @@
   </section>
 
   <!-- ================= CAPSTONE ================= -->
-  <section class="section section-tint" id="capstone">
+  <section class="section capstone" id="capstone">
+    <div class="capstone-glow" aria-hidden="true"></div>
     <div class="wrap capstone-grid">
       <div class="capstone-intro">
         <div class="capstone-sticky">
+          <p class="pill reveal">Graduate capstone</p>
           <h2 class="section-title reveal">
-            Graduate capstone:
-            <a href="https://lorekeeper.quest" target="_blank" rel="noopener" class="accent link-underline">Lorekeeper.quest</a>
+            <a href="https://lorekeeper.quest" target="_blank" rel="noopener" class="title-link">Lorekeeper<em>.quest</em></a>
           </h2>
-          <p class="section-lede reveal">
+          <p class="lede reveal">
             An open-source, self-hosted AI campaign companion for tabletop RPGs. A LoRA fine-tune of
-            Mistral 7B, hybrid retrieval over the user's own campaign records, and an evaluation harness
-            that measures both. No external AI APIs: the whole stack runs on the user's hardware.
+            Mistral 7B, hybrid retrieval over the user's own campaign records, and an evaluation
+            harness that measures both. No external AI APIs.
           </p>
-          <p class="status reveal"><span class="status-dot" aria-hidden="true"></span> Live and open source (AGPL-3.0)</p>
+          <p class="live reveal"><span class="live-dot" aria-hidden="true"></span>Live and open source, AGPL-3.0</p>
           <div class="capstone-links reveal">
-            <a href="https://lorekeeper.quest" target="_blank" rel="noopener" class="btn btn-primary">Explore the project <span aria-hidden="true">↗</span></a>
-            <a href="https://github.com/hsmith-dev/Lorekeeper.quest" target="_blank" rel="noopener" class="btn-link">Source on GitHub <span aria-hidden="true">↗</span></a>
-            <a href="https://huggingface.co/harrisonsmith/Lorekeeper-Mistral-7B-GGUF" target="_blank" rel="noopener" class="btn-link">Model on Hugging Face <span aria-hidden="true">↗</span></a>
+            <a href="https://lorekeeper.quest" target="_blank" rel="noopener" class="btn btn-solid">
+              Visit the project
+              <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-arrow-up-right"></i></span>
+            </a>
+            <a href="https://github.com/hsmith-dev/Lorekeeper.quest" target="_blank" rel="noopener" class="text-link"><i class="ph-light ph-github-logo" aria-hidden="true"></i>Source</a>
+            <a href="https://huggingface.co/harrisonsmith/Lorekeeper-Mistral-7B-GGUF" target="_blank" rel="noopener" class="text-link"><i class="ph-light ph-cube" aria-hidden="true"></i>Model</a>
           </div>
         </div>
       </div>
 
-      <div class="capstone-body">
-        <ol class="pipeline" aria-label="Capstone development pipeline">
-          <li class="pipeline-step reveal">
+      <ol class="pipeline" aria-label="Capstone development pipeline">
+        <li class="bezel reveal">
+          <div class="bezel-core step">
+            <i class="ph-light ph-database step-icon" aria-hidden="true"></i>
             <h3>Training data</h3>
-            <p>A session-journal training corpus across 12 tabletop game systems (fantasy, sci-fi, horror), with cleaning and formatting pipelines that made fine-tuning trustworthy.</p>
-          </li>
-          <li class="pipeline-step reveal">
+            <p>A session-journal corpus across 12 tabletop game systems (fantasy, sci-fi, horror), with cleaning and formatting pipelines that made fine-tuning trustworthy.</p>
+          </div>
+        </li>
+        <li class="bezel reveal">
+          <div class="bezel-core step">
+            <i class="ph-light ph-sliders-horizontal step-icon" aria-hidden="true"></i>
             <h3>Fine-tuning</h3>
-            <p>LoRA fine-tune of Mistral 7B Instruct, merged and quantized to Q4 GGUF. A 4&nbsp;GB model that runs on consumer hardware, published openly on Hugging Face.</p>
-          </li>
-          <li class="pipeline-step reveal">
+            <p>LoRA fine-tune of Mistral 7B Instruct, merged and quantized to Q4 GGUF. A 4&nbsp;GB model that runs on consumer hardware, published on Hugging Face.</p>
+          </div>
+        </li>
+        <li class="bezel reveal">
+          <div class="bezel-core step">
+            <i class="ph-light ph-git-merge step-icon" aria-hidden="true"></i>
             <h3>Hybrid RAG</h3>
-            <p>Semantic vector search (pgvector) fused with full-text keyword search via Reciprocal Rank Fusion. Embeddings handle paraphrase; keywords rescue the rare proper nouns they blur.</p>
-          </li>
-          <li class="pipeline-step reveal">
+            <p>Semantic search (pgvector) fused with full-text keyword search via Reciprocal Rank Fusion. Embeddings handle paraphrase; keywords rescue the rare proper nouns they blur.</p>
+          </div>
+        </li>
+        <li class="bezel reveal">
+          <div class="bezel-core step">
+            <i class="ph-light ph-crosshair step-icon" aria-hidden="true"></i>
             <h3>Measured relevance</h3>
-            <p>The retrieval gate's threshold is set by a labeled evaluation sweep, not guessed. When nothing relevant exists, the app labels its own reply as ungrounded instead of inventing.</p>
-          </li>
-          <li class="pipeline-step reveal">
+            <p>The retrieval threshold is set by a labeled evaluation sweep, not guessed. When nothing relevant exists, the app labels its own reply as ungrounded instead of inventing.</p>
+          </div>
+        </li>
+        <li class="bezel reveal">
+          <div class="bezel-core step">
+            <i class="ph-light ph-scales step-icon" aria-hidden="true"></i>
             <h3>Evaluation harness</h3>
-            <p>In-app model comparison (fine-tuned vs. base) with semantic-similarity scoring, plus a standalone retrieval benchmark. Quality is measured at both layers, continuously.</p>
-          </li>
-          <li class="pipeline-step reveal">
+            <p>In-app comparison of the fine-tuned and base models with semantic-similarity scoring, plus a standalone retrieval benchmark. Quality is measured at both layers.</p>
+          </div>
+        </li>
+        <li class="bezel reveal">
+          <div class="bezel-core step">
+            <i class="ph-light ph-eye step-icon" aria-hidden="true"></i>
             <h3>Production and transparency</h3>
-            <p>A Dockerized full stack (FastAPI, React, Postgres, Ollama) with token streaming and a per-answer retrieval trace. Every reply shows which records it drew from and why.</p>
-          </li>
-        </ol>
+            <p>Dockerized FastAPI, React, Postgres, and Ollama with token streaming and a per-answer retrieval trace. Every reply shows which records it drew from and why.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
 
-        <blockquote class="lesson reveal">
-          <h3>What the full pipeline actually teaches you</h3>
-          <p>
-            Every stage above is easy in isolation and hard in combination. The real lesson has been
-            that <strong>RAG quality is a data quality problem</strong>. Orchestration logic can't
-            compensate for a bad chunking strategy, and a well-trained model is worthless if the
-            interface buries the answer a user needs. Building it end to end with
-            <strong>Claude Code</strong> as a pair-programmer also reshaped how I write software: less
-            time on boilerplate, more on architecture, retrieval design, and checking whether the
-            system's output is actually correct.
-          </p>
+    <div class="wrap">
+      <figure class="lesson reveal">
+        <blockquote>
+          <p>RAG quality is a data quality problem.</p>
         </blockquote>
-      </div>
+        <figcaption>
+          Orchestration can't compensate for a bad chunking strategy, and a well-trained model is
+          worthless if the interface buries the answer. Building Lorekeeper end to end with Claude Code
+          moved my time from boilerplate to architecture, retrieval design, and checking that the
+          output is actually correct.
+        </figcaption>
+      </figure>
     </div>
   </section>
 
-  <!-- ================= AI SYSTEMS BUILT ================= -->
+  <!-- ================= SYSTEMS: gapless bento ================= -->
   <section class="section" id="work">
     <div class="wrap">
-      <h2 class="section-title reveal">AI systems built end to end</h2>
+      <h2 class="section-title section-title-center reveal">AI systems, built end to end.</h2>
 
       <div class="bento">
-        <article class="tile tile-feature reveal">
-          <h3><a href="https://ogden.harrisonsmith.ai" target="_blank" rel="noopener">Ogden</a></h3>
-          <p class="tile-kind">Multi-agent AI team platform</p>
-          <p>
-            A self-hosted, Dockerized platform for assembling AutoGen-backed agent personas, each with
-            its own prompt, model, and role, into per-project teams that carry a real backlog and work
-            it autonomously or on demand. Built as applied research during my M.S. to explore
-            multi-agent orchestration at a production level: sandboxed git and test tool execution,
-            per-project cost tracking and budget caps, and full run-history observability.
-          </p>
-          <ul class="tag-list">
-            <li>AutoGen</li><li>Multi-agent orchestration</li><li>FastAPI</li><li>Sandboxed tools</li><li>MIT</li>
-          </ul>
-          <a class="tile-link" href="https://ogden.harrisonsmith.ai" target="_blank" rel="noopener">ogden.harrisonsmith.ai <span aria-hidden="true">↗</span></a>
+        <article class="bezel tile-ogden reveal">
+          <div class="bezel-core tile">
+            <div class="tile-copy">
+              <h3><a href="https://ogden.harrisonsmith.ai" target="_blank" rel="noopener" class="stretched">Ogden</a></h3>
+              <p class="tile-kind">Multi-agent AI team platform</p>
+              <p>
+                A self-hosted platform for assembling AutoGen-backed agent personas, each with its own
+                prompt, model, and role, into teams that work a real backlog. Sandboxed git and test
+                tool execution, per-project budget caps, and full run-history observability.
+              </p>
+              <ul class="tags"><li>AutoGen</li><li>FastAPI</li><li>Sandboxed tools</li><li>MIT</li></ul>
+            </div>
+            <div class="tile-shot">
+              <img src="assets/work/ogden.jpg" width="2160" height="1350" loading="lazy"
+                   alt="The Ogden landing page: 'You bring the backlog. Ogden brings the crew.', beside a crew manifest of five AI personas and their current tasks.">
+            </div>
+            <span class="tile-arrow" aria-hidden="true"><i class="ph-light ph-arrow-up-right"></i></span>
+          </div>
         </article>
 
-        <article class="tile tile-soft reveal">
-          <h3>Hermit</h3>
-          <p class="tile-kind">Local-AI note companion <span class="flag">In development</span></p>
-          <p>
-            A native note-taking companion for iOS, iPadOS, macOS, and watchOS with an on-device AI
-            layer. Capture, organize, and converse with your notes without them ever leaving your
-            hardware. Private by architecture, not by policy.
-          </p>
-          <ul class="tag-list">
-            <li>Swift / SwiftUI</li><li>On-device LLM</li><li>Local-first</li>
-          </ul>
+        <article class="bezel tile-hermit reveal">
+          <div class="bezel-core tile">
+            <p class="flag">In development</p>
+            <h3>Hermit</h3>
+            <p class="tile-kind">Local-AI note companion</p>
+            <p>
+              Native notes for iOS, iPadOS, macOS, and watchOS with an on-device AI layer. Capture,
+              organize, and converse with your notes without them leaving your hardware.
+            </p>
+            <ul class="tags"><li>SwiftUI</li><li>On-device LLM</li><li>Local-first</li></ul>
+          </div>
         </article>
 
-        <article class="tile reveal">
-          <h3>ML classification pipeline</h3>
-          <p>
-            Full-lifecycle model development in Jupyter and ML.NET: data sanitization, ETL, training,
-            and evaluation, deployed as a working image-classification application.
-          </p>
-          <ul class="tag-list">
-            <li>ML.NET</li><li>Jupyter</li><li>ETL</li>
-          </ul>
+        <article class="bezel tile-ml reveal">
+          <div class="bezel-core tile">
+            <i class="ph-light ph-tree-structure tile-icon" aria-hidden="true"></i>
+            <h3>ML classification pipeline</h3>
+            <p>Sanitization, ETL, training, and evaluation in Jupyter and ML.NET, deployed as a working image classifier.</p>
+          </div>
         </article>
 
-        <article class="tile tile-lined reveal">
-          <h3>CI/CD for ThunderBeast.Studio</h3>
-          <p>
-            GitHub Actions pipelines that compile and deploy production builds directly to a live
-            website, owning the full deployment path from commit to production.
-          </p>
-          <ul class="tag-list">
-            <li>GitHub Actions</li><li>CI/CD</li><li>Automated deploys</li>
-          </ul>
+        <article class="bezel tile-ci reveal">
+          <div class="bezel-core tile">
+            <i class="ph-light ph-git-branch tile-icon" aria-hidden="true"></i>
+            <h3>CI/CD for ThunderBeast.Studio</h3>
+            <p>GitHub Actions pipelines that compile and deploy production builds straight to a live site.</p>
+          </div>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ================= EXPERIENCE ================= -->
-  <section class="section section-tint" id="experience">
-    <div class="wrap">
-      <h2 class="section-title reveal">Where it's been applied</h2>
+  <!-- ================= EXPERIENCE: stacking cards ================= -->
+  <section class="section" id="experience">
+    <div class="wrap exp-grid">
+      <div class="exp-head">
+        <h2 class="section-title reveal">Where it's been applied.</h2>
+        <a href="https://linkedin.com/in/hsmith-dev" target="_blank" rel="noopener" class="text-link reveal"><i class="ph-light ph-linkedin-logo" aria-hidden="true"></i>Full history on LinkedIn</a>
+      </div>
 
-      <div class="roles">
-        <article class="role reveal">
-          <p class="role-date">Nov 2025 - Present</p>
-          <div>
-            <h3>Business Intelligence Analyst</h3>
-            <p class="role-org">Blytz</p>
+      <div class="stack">
+        <article class="bezel stack-card">
+          <div class="bezel-core role">
+            <div class="role-top">
+              <div>
+                <h3>Business Intelligence Analyst</h3>
+                <p class="role-org">Blytz</p>
+              </div>
+              <span class="role-date">Nov 2025 - Present</span>
+            </div>
             <ul>
-              <li>Deliver BigQuery-backed data pipelines and dashboards that turn raw enterprise data into decision-ready outputs for executives and cross-functional teams.</li>
-              <li>Integrate enterprise data from external partners, including HubSpot, through ETL pipelines that centralize reporting and analytics.</li>
-              <li>Keep Betzy, Blytz's production AI agent, accurate by validating triggered responses, correcting queries, and providing human-in-the-loop oversight.</li>
-              <li>Work with the internal AI team to troubleshoot issues and launch new capabilities, such as letting users build custom dashboards from training and payment processors.</li>
-              <li>Speed up complex queries and dashboards with AI coding tools like Claude Code, and run deep-dive analysis in Python and Jupyter.</li>
+              <li>Deliver BigQuery-backed pipelines and dashboards that turn raw enterprise data into decision-ready outputs for executives.</li>
+              <li>Integrate partner data, including HubSpot, through ETL pipelines that centralize reporting.</li>
+              <li>Keep Betzy, Blytz's production AI agent, accurate through response validation, query correction, and human-in-the-loop oversight.</li>
+              <li>Work with the AI team to launch capabilities like user-built dashboards from training and payment processors.</li>
+              <li>Speed up complex queries with Claude Code, and run deep-dive analysis in Python and Jupyter.</li>
             </ul>
           </div>
         </article>
 
-        <article class="role reveal">
-          <p class="role-date">Mar 2024 - Present</p>
-          <div>
-            <h3>Software and IT Services</h3>
-            <p class="role-org">Common Thread</p>
+        <article class="bezel stack-card">
+          <div class="bezel-core role">
+            <div class="role-top">
+              <div>
+                <h3>Software and IT Services</h3>
+                <p class="role-org">Common Thread</p>
+              </div>
+              <span class="role-date">Mar 2024 - Present</span>
+            </div>
             <ul>
               <li>Build and maintain backend services and SQL systems for a variety of clients, owning reliability with no platform team behind me.</li>
             </ul>
           </div>
         </article>
 
-        <article class="role reveal">
-          <p class="role-date">May 2023 - Nov 2025</p>
-          <div>
-            <h3>Data Analyst and AI Trainer</h3>
-            <p class="role-org">Salt Lake Community College</p>
+        <article class="bezel stack-card">
+          <div class="bezel-core role">
+            <div class="role-top">
+              <div>
+                <h3>Data Analyst and AI Trainer</h3>
+                <p class="role-org">Salt Lake Community College</p>
+              </div>
+              <span class="role-date">May 2023 - Nov 2025</span>
+            </div>
             <ul>
               <li>Applied data science principles (sanitization, ETL, model training) in Jupyter, and engineered SQL and JavaScript visualizations.</li>
             </ul>
           </div>
         </article>
 
-        <article class="role reveal">
-          <p class="role-date">2015 - 2023</p>
-          <div>
-            <h3>Earlier technical roles</h3>
-            <p class="role-org">Hill Air Force Base, Instructure (Canvas), Microsoft, Control4</p>
+        <article class="bezel stack-card">
+          <div class="bezel-core role">
+            <div class="role-top">
+              <div>
+                <h3>Earlier technical roles</h3>
+                <p class="role-org">Hill Air Force Base, Instructure, Microsoft, Control4</p>
+              </div>
+              <span class="role-date">2015 - 2023</span>
+            </div>
             <ul>
               <li>Software development, data, and systems support across enterprise and defense environments.</li>
             </ul>
           </div>
         </article>
       </div>
-
-      <p class="more-link reveal">
-        Full role history on <a href="https://linkedin.com/in/hsmith-dev" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
-      </p>
     </div>
   </section>
 
-  <!-- ================= SKILLS ================= -->
+  <!-- ================= SKILLS: interactive index ================= -->
   <section class="section" id="skills">
     <div class="wrap">
-      <h2 class="section-title reveal">The stack, top to bottom</h2>
+      <h2 class="section-title reveal">The stack, top to bottom.</h2>
 
-      <div class="skills">
-        <div class="skill-group reveal">
-          <h3>LLM and RAG</h3>
-          <ul>
-            <li>RAG architecture design</li>
-            <li>Prompt engineering</li>
-            <li>Claude, Gemini, OpenAI APIs</li>
-            <li>Ollama, KoboldCpp</li>
-            <li>Agentic tool-use orchestration</li>
-          </ul>
+      <div class="skills reveal">
+        <div class="skill-tabs" role="tablist" aria-label="Skill areas">
+          <button role="tab" id="t-llm" aria-controls="p-llm" aria-selected="true">LLM and RAG</button>
+          <button role="tab" id="t-model" aria-controls="p-model" aria-selected="false" tabindex="-1">Modeling and evaluation</button>
+          <button role="tab" id="t-data" aria-controls="p-data" aria-selected="false" tabindex="-1">Data engineering</button>
+          <button role="tab" id="t-eng" aria-controls="p-eng" aria-selected="false" tabindex="-1">Engineering and deployment</button>
         </div>
-        <div class="skill-group reveal">
-          <h3>Modeling and evaluation</h3>
-          <ul>
-            <li>TensorFlow</li>
-            <li>PyTorch</li>
-            <li>ML.NET</li>
-            <li>Classification models</li>
-            <li>Human-in-the-loop evaluation</li>
-          </ul>
-        </div>
-        <div class="skill-group reveal">
-          <h3>Data engineering</h3>
-          <ul>
-            <li>ETL pipeline design</li>
-            <li>Data sanitization</li>
-            <li>Feature preparation</li>
-            <li>SQL and BigQuery</li>
-            <li>Python, pandas, Jupyter</li>
-          </ul>
-        </div>
-        <div class="skill-group reveal">
-          <h3>Engineering and deployment</h3>
-          <ul>
-            <li>Python, JavaScript, C#</li>
-            <li>REST API design</li>
-            <li>Git, GitHub Actions CI/CD</li>
-            <li>Google Cloud, AWS</li>
-            <li>Linux</li>
-          </ul>
+
+        <div class="bezel skill-panels">
+          <div class="bezel-core">
+            <ul role="tabpanel" id="p-llm" aria-labelledby="t-llm" class="skill-panel is-active">
+              <li>RAG architecture design</li><li>Prompt engineering</li><li>Claude, Gemini, and OpenAI APIs</li><li>Ollama and KoboldCpp</li><li>Agentic tool-use orchestration</li>
+            </ul>
+            <ul role="tabpanel" id="p-model" aria-labelledby="t-model" class="skill-panel" hidden>
+              <li>TensorFlow</li><li>PyTorch</li><li>ML.NET</li><li>Classification models</li><li>Human-in-the-loop evaluation</li>
+            </ul>
+            <ul role="tabpanel" id="p-data" aria-labelledby="t-data" class="skill-panel" hidden>
+              <li>ETL pipeline design</li><li>Data sanitization</li><li>Feature preparation</li><li>SQL and BigQuery</li><li>Python, pandas, Jupyter</li>
+            </ul>
+            <ul role="tabpanel" id="p-eng" aria-labelledby="t-eng" class="skill-panel" hidden>
+              <li>Python, JavaScript, C#</li><li>REST API design</li><li>GitHub Actions CI/CD</li><li>Google Cloud and AWS</li><li>Linux</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ================= TEACHING ================= -->
-  <section class="section section-tint" id="teaching">
+  <section class="section" id="teaching">
     <div class="wrap">
-      <h2 class="section-title section-title-lg reveal">Teaching AI, and building it into your product.</h2>
+      <h2 class="section-title section-title-center reveal">Teaching AI, and building it into your product.</h2>
       <div class="offers">
-        <div class="offer reveal">
-          <h3>Teaching and training</h3>
-          <p>
-            Years as an AI Trainer at Salt Lake Community College taught me how to make RAG, LLM
-            orchestration, and applied ML approachable. I bring that to workshops, mentorship, and
-            technical training for engineers and teams new to them.
-          </p>
+        <div class="bezel reveal">
+          <div class="bezel-core offer">
+            <i class="ph-light ph-chalkboard-teacher offer-icon" aria-hidden="true"></i>
+            <h3>Teaching and training</h3>
+            <p>
+              Years as an AI Trainer at Salt Lake Community College taught me how to make RAG, LLM
+              orchestration, and applied ML approachable. I bring that to workshops, mentorship, and
+              training for teams new to them.
+            </p>
+          </div>
         </div>
-        <div class="offer reveal">
-          <h3>AI feature development</h3>
-          <p>
-            I design and build AI capabilities into existing software: RAG search, LLM orchestration,
-            evaluation pipelines, and the data infrastructure that keeps AI features trustworthy in
-            production, not just in a demo.
-          </p>
+        <div class="bezel reveal">
+          <div class="bezel-core offer">
+            <i class="ph-light ph-circuitry offer-icon" aria-hidden="true"></i>
+            <h3>AI feature development</h3>
+            <p>
+              I build AI capabilities into existing software: RAG search, LLM orchestration, evaluation
+              pipelines, and the data infrastructure that keeps AI features trustworthy in production,
+              not just in a demo.
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="reveal">
-        <a href="#contact" class="btn btn-primary">Get in touch</a>
       </div>
     </div>
   </section>
 
   <!-- ================= CONTACT ================= -->
-  <section class="section contact-section" id="contact">
-    <div class="wrap contact-grid">
-      <div>
-        <p class="eyebrow reveal">Contact</p>
-        <h2 class="section-title reveal">Have a project, class, or team to talk about?</h2>
-        <p class="section-lede reveal">
-          Based in Ogden, Utah. Open to AI development work and teaching engagements, remote or local.
-        </p>
-        <a class="contact-email reveal" href="mailto:hello@harrisonsmith.ai">hello@harrisonsmith.ai</a>
-      </div>
-
-      <div class="ledger reveal">
-        <a class="ledger-item" href="https://linkedin.com/in/hsmith-dev" target="_blank" rel="noopener">
-          <span class="ledger-label">LinkedIn</span>
-          <span class="ledger-value">linkedin.com/in/hsmith-dev <span aria-hidden="true">↗</span></span>
+  <section class="contact" id="contact">
+    <div class="contact-bg" aria-hidden="true"><span class="orb orb-a"></span><span class="orb orb-b"></span></div>
+    <div class="wrap contact-inner">
+      <p class="pill reveal">Open to AI development and teaching</p>
+      <h2 class="contact-title reveal">Have a project, class, or team to talk about?</h2>
+      <a class="contact-email reveal" href="mailto:hello@harrisonsmith.ai">hello@harrisonsmith.ai</a>
+      <div class="contact-links reveal">
+        <a href="https://linkedin.com/in/hsmith-dev" target="_blank" rel="noopener" class="btn btn-glass">
+          LinkedIn <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-linkedin-logo"></i></span>
         </a>
-        <a class="ledger-item" href="https://github.com/hsmith-dev" target="_blank" rel="noopener">
-          <span class="ledger-label">GitHub</span>
-          <span class="ledger-value">github.com/hsmith-dev <span aria-hidden="true">↗</span></span>
+        <a href="https://github.com/hsmith-dev" target="_blank" rel="noopener" class="btn btn-glass">
+          GitHub <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-github-logo"></i></span>
         </a>
-        <a class="ledger-item" href="assets/Harrison_Smith_Resume.pdf" target="_blank">
-          <span class="ledger-label">Résumé</span>
-          <span class="ledger-value">Download PDF <span aria-hidden="true">↗</span></span>
+        <a href="assets/Harrison_Smith_Resume.pdf" target="_blank" class="btn btn-glass">
+          Résumé <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-file-pdf"></i></span>
         </a>
       </div>
+      <p class="contact-note reveal">Based in Ogden, Utah. Remote or local.</p>
     </div>
   </section>
 
 </main>
 
-<footer class="site-footer">
+<footer class="footer">
   <div class="wrap footer-inner">
     <span>© <span id="year">2026</span> Harrison Smith</span>
     <span>Designed and built with Claude Code.</span>
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
