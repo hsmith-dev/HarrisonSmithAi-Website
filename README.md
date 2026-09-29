@@ -12,6 +12,7 @@ index.html        Single-page site (Hero, About, Capstone, Systems Built,
 css/style.css      Design system + layout
 js/main.js         Nav toggle, scroll-reveal animations, active-link state
 assets/            Resume PDF, favicon
+404.html           Branded not-found page (served by GitHub Pages)
 CNAME              Custom domain for GitHub Pages
 .nojekyll          Disables Jekyll processing
 ```

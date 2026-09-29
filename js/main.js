@@ -1,47 +1,53 @@
 (() => {
   'use strict';
 
+  document.documentElement.classList.remove('no-js');
+
   // Footer year
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Header background state on scroll
+  const hasIO = 'IntersectionObserver' in window;
+
+  // Header border once the page scrolls past a sentinel near the top
   const header = document.getElementById('site-header');
-  const onScroll = () => {
-    if (window.scrollY > 12) header.classList.add('scrolled');
-    else header.classList.remove('scrolled');
-  };
-  onScroll();
-  window.addEventListener('scroll', onScroll, { passive: true });
+  if (hasIO && header) {
+    const sentinel = document.createElement('div');
+    sentinel.setAttribute('aria-hidden', 'true');
+    sentinel.style.cssText = 'position:absolute;top:12px;left:0;width:1px;height:1px;pointer-events:none;';
+    document.body.prepend(sentinel);
+    new IntersectionObserver(([entry]) => header.classList.toggle('scrolled', !entry.isIntersecting))
+      .observe(sentinel);
+  }
 
   // Mobile nav toggle
   const navToggle = document.getElementById('navToggle');
   const nav = document.getElementById('nav');
-  navToggle.addEventListener('click', () => {
-    const isOpen = nav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
-    navToggle.classList.toggle('active', isOpen);
-  });
-  nav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-    });
+  const setNav = (open) => {
+    nav.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+  };
+  navToggle.addEventListener('click', () => setNav(!nav.classList.contains('open')));
+  nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setNav(false)));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && nav.classList.contains('open')) {
+      setNav(false);
+      navToggle.focus();
+    }
   });
 
-  // Scroll-reveal animations
+  // Scroll reveal: elements that enter together cascade in sequence
   const revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && revealEls.length) {
+  if (hasIO && revealEls.length) {
     const io = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, i) => {
-          if (entry.isIntersecting) {
-            const el = entry.target;
-            const delay = (i % 6) * 60;
-            setTimeout(() => el.classList.add('in-view'), delay);
-            io.unobserve(el);
-          }
-        });
+        entries
+          .filter((entry) => entry.isIntersecting)
+          .forEach((entry, i) => {
+            entry.target.style.setProperty('--delay', `${Math.min(i, 6) * 70}ms`);
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          });
       },
       { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
     );
@@ -53,17 +59,13 @@
   // Active nav link highlighting
   const sections = document.querySelectorAll('main section[id]');
   const navLinks = document.querySelectorAll('.nav a[href^="#"]');
-  if ('IntersectionObserver' in window && sections.length) {
+  if (hasIO && sections.length) {
     const navObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
           const id = entry.target.getAttribute('id');
-          const link = document.querySelector(`.nav a[href="#${id}"]`);
-          if (!link) return;
-          if (entry.isIntersecting) {
-            navLinks.forEach((l) => l.classList.remove('active'));
-            link.classList.add('active');
-          }
+          navLinks.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
         });
       },
       { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
