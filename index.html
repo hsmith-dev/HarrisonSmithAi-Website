@@ -96,7 +96,7 @@
         <div class="bezel-core">
           <div class="stage-bar" aria-hidden="true"><em>lorekeeper.quest</em></div>
           <img src="assets/work/lorekeeper.jpg" width="2160" height="1350"
-               alt="The Lorekeeper.quest landing page: 'The AI campaign companion that remembers your world', beside a campaign chat that cites its source journal entry.">
+               alt="The Lorekeeper.quest landing page: 'The AI campaign companion that remembers your world', beside a parchment card where Lorekeeper answers a question and cites the journal entry it came from.">
         </div>
       </a>
     </div>
@@ -152,12 +152,12 @@
               <span class="fact-label">years of combined technical experience</span>
             </div>
           </div>
-          <div class="bezel reveal">
+          <a class="bezel fact-link reveal" href="https://github.com/hsmith-dev" target="_blank" rel="noopener">
             <div class="bezel-core fact">
-              <span class="fact-num">4</span>
-              <span class="fact-label">AI products built end to end</span>
+              <i class="ph-light ph-github-logo fact-icon" aria-hidden="true"></i>
+              <span class="fact-label">More projects and source on GitHub <i class="ph-light ph-arrow-up-right" aria-hidden="true"></i></span>
             </div>
-          </div>
+          </a>
           <div class="bezel facts-wide reveal">
             <div class="bezel-core edu">
               <div class="edu-row">
@@ -281,15 +281,16 @@
               <h3><a href="https://ogden.harrisonsmith.ai" target="_blank" rel="noopener" class="stretched">Ogden</a></h3>
               <p class="tile-kind">Multi-agent AI team platform</p>
               <p>
-                A self-hosted platform for assembling AutoGen-backed agent personas, each with its own
-                prompt, model, and role, into teams that work a real backlog. Sandboxed git and test
-                tool execution, per-project budget caps, and full run-history observability.
+                A self-hosted crew of AI personas (product manager, engineers, QA, DevOps) working one
+                shared Kanban board inside a sandboxed git workspace. They pick up tasks, write the code,
+                and open branches for human review, with any model provider, spend caps, and a full
+                audit trail.
               </p>
-              <ul class="tags"><li>AutoGen</li><li>FastAPI</li><li>Sandboxed tools</li><li>MIT</li></ul>
+              <ul class="tags"><li>Multi-agent</li><li>Human-in-the-loop</li><li>Any model provider</li><li>Self-hosted</li></ul>
             </div>
             <div class="tile-shot">
               <img src="assets/work/ogden.jpg" width="2160" height="1350" loading="lazy"
-                   alt="The Ogden landing page: 'You bring the backlog. Ogden brings the crew.', beside a crew manifest of five AI personas and their current tasks.">
+                   alt="The Ogden landing page: 'You bring the backlog. Ogden brings the crew.', beside a Kanban board where AI personas move tasks from backlog to review.">
             </div>
             <span class="tile-arrow" aria-hidden="true"><i class="ph-light ph-arrow-up-right"></i></span>
           </div>
@@ -297,14 +298,20 @@
 
         <article class="bezel tile-hermit reveal">
           <div class="bezel-core tile">
-            <p class="flag">In development</p>
-            <h3>Hermit</h3>
-            <p class="tile-kind">Local-AI note companion</p>
-            <p>
-              Native notes for iOS, iPadOS, macOS, and watchOS with an on-device AI layer. Capture,
-              organize, and converse with your notes without them leaving your hardware.
-            </p>
-            <ul class="tags"><li>SwiftUI</li><li>On-device LLM</li><li>Local-first</li></ul>
+            <div class="tile-copy">
+              <p class="flag">Coming soon to iOS</p>
+              <h3><a href="https://hermit.harrisonsmith.ai" target="_blank" rel="noopener" class="stretched">Hermit</a></h3>
+              <p class="tile-kind">Private voice notes with on-device AI</p>
+              <p>
+                Records, transcribes with Whisper, summarizes, and pulls out tasks on iPhone and iPad.
+                Every step runs on the device's own chip, even in airplane mode.
+              </p>
+              <ul class="tags"><li>On-device LLM</li><li>Whisper</li><li>iOS</li></ul>
+            </div>
+            <div class="tile-side-shot">
+              <img src="assets/work/hermit.jpg" width="2160" height="1350" loading="lazy"
+                   alt="The Hermit landing page: 'Your voice notes stay on your iPhone.', beside two iPhone screens showing a lecture recording summary and a task list.">
+            </div>
           </div>
         </article>
 
@@ -323,6 +330,13 @@
             <p>GitHub Actions pipelines that compile and deploy production builds straight to a live site.</p>
           </div>
         </article>
+      </div>
+
+      <div class="work-more reveal">
+        <a href="https://github.com/hsmith-dev" target="_blank" rel="noopener" class="btn btn-glass">
+          More on GitHub
+          <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-github-logo"></i></span>
+        </a>
       </div>
     </div>
   </section>

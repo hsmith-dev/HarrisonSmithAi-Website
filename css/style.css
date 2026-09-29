@@ -460,6 +460,28 @@ em{ font-style: normal; }
     radial-gradient(90% 120% at 100% 100%, rgba(233,137,74,0.18), transparent 60%),
     linear-gradient(180deg, var(--core-2), var(--core));
 }
+.tile-hermit .tile{ display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 24px; padding-right: 0; }
+.tile-hermit .tile-copy{ position: static; display: flex; flex-direction: column; }
+.tile-side-shot{
+  margin: -32px 0 -32px 0; position: relative; overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 22%);
+          mask-image: linear-gradient(90deg, transparent, #000 22%);
+}
+.tile-side-shot img{
+  position: absolute; left: 0; top: -14%; width: 100%; height: 128%;
+  object-fit: cover; object-position: 80% 50%;
+  transition: transform 1s var(--ease);
+}
+.tile-hermit:hover .tile-side-shot img{ transform: scale(1.05); }
+
+.fact-link{ transition: border-color .6s var(--ease), transform .6s var(--ease); }
+.fact-link:hover{ border-color: var(--hair-strong); transform: translateY(-4px); }
+.fact-icon{ font-size: 2.6rem; color: var(--accent); line-height: 1; margin-bottom: auto; padding-bottom: 18px; }
+.fact-link .fact-label{ color: var(--text-dim); transition: color .4s var(--ease); }
+.fact-link:hover .fact-label{ color: var(--text); }
+
+.work-more{ display: flex; justify-content: center; margin-top: 48px; }
+
 .tile-hermit .tile::before{
   content: ''; position: absolute; right: -120px; bottom: -120px; width: 380px; height: 380px;
   background: repeating-radial-gradient(circle, var(--hair) 0 1px, transparent 1px 28px);
@@ -470,7 +492,7 @@ em{ font-style: normal; }
 .flag{
   align-self: flex-start;
   font-family: var(--font-mono); font-size: .72rem; color: var(--accent) !important;
-  padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); margin-bottom: 20px;
+  padding: 4px 10px; border-radius: 999px; background: var(--accent-soft); margin-bottom: 20px; white-space: nowrap;
 }
 .tags{ display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 8px; }
 .tags li{
@@ -635,6 +657,10 @@ em{ font-style: normal; }
   .tile-ogden, .tile-hermit, .tile-ml, .tile-ci{ grid-column: span 1; grid-row: auto; }
   .tile{ padding: 26px; }
   .tile-shot{ margin-right: -26px; margin-left: 8%; }
+  .tile-hermit .tile{ grid-template-columns: 1fr; padding-right: 26px; }
+  .tile-side-shot{ margin: 0 -26px -26px; height: 240px; }
+  .tile-side-shot img{ top: -35%; height: 170%; object-position: 100% 50%; }
+  .tile-side-shot{ -webkit-mask-image: linear-gradient(180deg, transparent, #000 30%); mask-image: linear-gradient(180deg, transparent, #000 30%); }
   .tile-icon{ padding-bottom: 20px; }
   .fact{ padding: 22px 20px; }
   .edu{ padding: 6px 20px; }
