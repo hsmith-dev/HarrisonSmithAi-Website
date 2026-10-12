@@ -125,10 +125,12 @@
     onEnter: (els) => gsap.to(els, { opacity: 1, y: 0, duration: 1.2, ease, stagger: 0.08, overwrite: true }),
   });
 
-  // Bento screenshot scales up as it enters
-  gsap.fromTo('.tile-shot', { scale: 0.88, opacity: 0.4, transformOrigin: '0% 100%' }, {
-    scale: 1, opacity: 1, ease: 'none',
-    scrollTrigger: { trigger: '.tile-ogden', start: 'top 85%', end: 'center 60%', scrub: 0.6 },
+  // Bento screenshots scale up as each one enters
+  gsap.utils.toArray('.tile-shot').forEach((shot) => {
+    gsap.fromTo(shot, { scale: 0.88, opacity: 0.4, transformOrigin: '0% 100%' }, {
+      scale: 1, opacity: 1, ease: 'none',
+      scrollTrigger: { trigger: shot.closest('article'), start: 'top 85%', end: 'center 60%', scrub: 0.6 },
+    });
   });
 
   // Services: each card recedes as the next one stacks onto it
