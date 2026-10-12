@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harrison Smith | AI Engineer &amp; Educator</title>
-<meta name="description" content="Harrison Smith is an AI engineer building RAG pipelines, LLM orchestration, and ML data systems. M.S. in Applied AI, capstone project Lorekeeper.quest. Available for AI development and teaching.">
+<title>Harrison Smith | Contract AI &amp; Data Engineering</title>
+<meta name="description" content="Harrison Smith, operating as HSmithDev LLC, is an independent contract engineer for AI features, data pipelines, and full-stack delivery. RAG, LLM orchestration, BigQuery, and production ownership for businesses that need to ship.">
 <meta name="author" content="Harrison Smith">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#07070a">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Harrison Smith | AI Engineer &amp; Educator">
-<meta property="og:description" content="Building RAG pipelines, LLM orchestration, and ML data systems. M.S. Applied AI. Capstone: Lorekeeper.quest.">
+<meta property="og:title" content="Harrison Smith | Contract AI &amp; Data Engineering">
+<meta property="og:description" content="Independent contract engineer for AI features, data pipelines, and full-stack delivery. RAG, LLM orchestration, BigQuery, and production ownership for businesses that need to ship.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://harrisonsmith.ai">
 <meta property="og:image" content="https://harrisonsmith.ai/assets/og-image.png">
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/light/style.css">
-<link rel="preload" as="image" href="assets/work/lorekeeper.jpg">
+<link rel="preload" as="image" href="assets/work/ogden.jpg">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -33,14 +33,13 @@
 <!-- ================= NAV: floating glass pill ================= -->
 <header class="nav-shell" id="site-header">
   <div class="nav-pill">
-    <a href="#home" class="brand" aria-label="Harrison Smith, home">HS<span>.</span>ai</a>
+    <a href="#home" class="brand" aria-label="Harrison Smith, home">HS<span>.</span>dev</a>
     <nav class="nav" aria-label="Primary">
       <a href="#about">About</a>
-      <a href="#capstone">Capstone</a>
-      <a href="#work">Systems</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#work">Work</a>
       <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#teaching">Teaching</a>
     </nav>
     <a href="#contact" class="nav-cta">Contact</a>
     <button class="burger" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
@@ -52,11 +51,10 @@
 <div class="menu" id="menu" aria-hidden="true">
   <nav class="menu-links" aria-label="Mobile">
     <a href="#about">About</a>
-    <a href="#capstone">Capstone</a>
-    <a href="#work">Systems</a>
+    <a href="#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#work">Work</a>
     <a href="#experience">Experience</a>
-    <a href="#skills">Skills</a>
-    <a href="#teaching">Teaching</a>
     <a href="#contact">Contact</a>
   </nav>
 </div>
@@ -73,30 +71,29 @@
     </div>
 
     <div class="wrap hero-inner">
-      <p class="pill hero-pill" data-hero><span class="pill-dot" aria-hidden="true"></span>M.S. Applied AI, Neumont University</p>
-      <h1 class="hero-title" data-split>Harrison Smith builds <em>AI systems</em> that ship.</h1>
+      <h1 class="hero-title" data-split>AI and data systems, <em>built to ship.</em></h1>
       <p class="hero-sub" data-hero>
-        Ten years of software engineering, now focused on RAG, LLM orchestration,
-        and the data pipelines that make them trustworthy.
+        I'm Harrison Smith, a contract AI and data engineer. I scope, build, and
+        ship production systems for businesses, not demos.
       </p>
       <div class="hero-actions" data-hero>
-        <a href="#contact" class="btn btn-solid">
-          Get in touch
+        <a href="mailto:hello@harrisonsmith.ai" class="btn btn-solid">
+          Email me
           <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-arrow-up-right"></i></span>
         </a>
-        <a href="#work" class="btn btn-glass">
-          Explore the work
+        <a href="#services" class="btn btn-glass">
+          See services
           <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-arrow-down"></i></span>
         </a>
       </div>
     </div>
 
     <div class="wrap hero-stage">
-      <a class="bezel stage-frame" id="stageFrame" href="https://lorekeeper.quest" target="_blank" rel="noopener" aria-label="Lorekeeper.quest, live site">
+      <a class="bezel stage-frame" id="stageFrame" href="https://github.com/hsmith-dev/ogden-agents" target="_blank" rel="noopener" aria-label="Ogden Agents, a recent build on GitHub">
         <div class="bezel-core">
-          <div class="stage-bar" aria-hidden="true"><em>lorekeeper.quest</em></div>
-          <img src="assets/work/lorekeeper.jpg" width="2160" height="1350"
-               alt="The Lorekeeper.quest landing page: 'The AI campaign companion that remembers your world', beside a parchment card where Lorekeeper answers a question and cites the journal entry it came from.">
+          <div class="stage-bar" aria-hidden="true"><em>Recent build</em></div>
+          <img src="assets/work/ogden.jpg" width="2160" height="1350"
+               alt="Ogden Agents' chat view: a project sidebar showing which chats are working or waiting, beside a permission card where Claude Code asks to run npm test.">
         </div>
       </a>
     </div>
@@ -106,10 +103,10 @@
   <div class="marquee" aria-label="Core stack">
     <div class="marquee-track">
       <ul>
-        <li>Retrieval-augmented generation</li><li>LoRA fine-tuning</li><li>pgvector</li><li>Multi-agent orchestration</li><li>Ollama</li><li>Evaluation harnesses</li><li>FastAPI</li><li>BigQuery</li><li>PyTorch</li>
+        <li>Retrieval-augmented generation</li><li>Multi-agent orchestration</li><li>BigQuery and ETL</li><li>PostgreSQL and pgvector</li><li>Ollama and local LLMs</li><li>Evaluation harnesses</li><li>FastAPI</li><li>GitHub Actions CI/CD</li><li>LoRA fine-tuning</li>
       </ul>
       <ul aria-hidden="true">
-        <li>Retrieval-augmented generation</li><li>LoRA fine-tuning</li><li>pgvector</li><li>Multi-agent orchestration</li><li>Ollama</li><li>Evaluation harnesses</li><li>FastAPI</li><li>BigQuery</li><li>PyTorch</li>
+        <li>Retrieval-augmented generation</li><li>Multi-agent orchestration</li><li>BigQuery and ETL</li><li>PostgreSQL and pgvector</li><li>Ollama and local LLMs</li><li>Evaluation harnesses</li><li>FastAPI</li><li>GitHub Actions CI/CD</li><li>LoRA fine-tuning</li>
       </ul>
     </div>
   </div>
@@ -119,29 +116,31 @@
     <div class="wrap">
       <h2 class="visually-hidden">About</h2>
       <p class="statement" data-scrub>
-        I spent a decade writing production software. Now I build the AI that runs on it:
-        retrieval pipelines, fine-tuned models, and the evaluation that proves they work.
+        I spent a decade writing production software. Now I build the AI and data
+        systems that keep businesses running on it.
       </p>
 
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            I'm an AI-focused engineer based in Ogden, Utah. My background is classic software
-            engineering: backend services, SQL systems, CI/CD pipelines. For the past several years
+            I'm Harrison Smith, an independent AI and data engineer based in Ogden, Utah,
+            operating under <strong>HSmithDev LLC</strong>. My background is classic software
+            engineering: backend services, SQL systems, CI/CD pipelines. The last several years,
             I've rebuilt that foundation around AI, with RAG pipelines, multi-model orchestration
-            across Claude, Gemini, and ChatGPT, local LLM hosting, and the ML data work that makes
-            any of it trustworthy.
+            across Claude, Gemini, and ChatGPT, local LLM hosting, and the data engineering that
+            makes any of it trustworthy.
           </p>
           <p>
-            My M.S. in Applied AI pushed me deep into the parts a bootcamp skips: ETL design, data
-            sanitization, model training and evaluation in TensorFlow and PyTorch, and the statistics
-            behind knowing whether a model actually works. I pair that with real production
-            responsibility, validating a live AI agent at Blytz.
+            Day to day, I'm the Business Intelligence Analyst at BlytzPay, a Series A payments
+            company, where I build the BigQuery models and dashboards Finance and Risk run on, and
+            own the evaluation framework for their production AI agent. I bring that same
+            production discipline to client work.
           </p>
           <p>
-            I build with <strong>Claude Code</strong> as a first-class part of my workflow. Not to skip
-            the engineering, but to move faster through it while staying accountable for every
-            architectural decision underneath.
+            My M.S. in Applied AI pushed me deep into the parts a bootcamp skips: model training
+            and evaluation, ETL design, and the statistics behind knowing whether a model actually
+            works. I build with <strong>Claude Code</strong> as a first-class part of my workflow,
+            to move faster through engineering, not skip it.
           </p>
         </div>
 
@@ -181,77 +180,78 @@
     </div>
   </section>
 
-  <!-- ================= CAPSTONE ================= -->
-  <section class="section capstone" id="capstone">
-    <div class="capstone-glow" aria-hidden="true"></div>
-    <div class="wrap capstone-grid">
-      <div class="capstone-intro">
-        <div class="capstone-sticky">
-          <p class="pill reveal">Graduate capstone</p>
-          <h2 class="section-title reveal">
-            <a href="https://lorekeeper.quest" target="_blank" rel="noopener" class="title-link">Lorekeeper<em>.quest</em></a>
-          </h2>
-          <p class="lede reveal">
-            An open-source, self-hosted AI campaign companion for tabletop RPGs. A LoRA fine-tune of
-            Mistral 7B, hybrid retrieval over the user's own campaign records, and an evaluation
-            harness that measures both. No external AI APIs.
-          </p>
-          <p class="live reveal"><span class="live-dot" aria-hidden="true"></span>Live and open source, AGPL-3.0</p>
-          <div class="capstone-links reveal">
-            <a href="https://lorekeeper.quest" target="_blank" rel="noopener" class="btn btn-solid">
-              Visit the project
-              <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-arrow-up-right"></i></span>
-            </a>
-            <a href="https://github.com/hsmith-dev/Lorekeeper.quest" target="_blank" rel="noopener" class="text-link"><i class="ph-light ph-github-logo" aria-hidden="true"></i>Source</a>
-            <a href="https://huggingface.co/harrisonsmith/Lorekeeper-Mistral-7B-GGUF" target="_blank" rel="noopener" class="text-link"><i class="ph-light ph-cube" aria-hidden="true"></i>Model</a>
-          </div>
-        </div>
+  <!-- ================= SERVICES: sticky intro + stacking cards ================= -->
+  <section class="section" id="services">
+    <div class="wrap exp-grid">
+      <div class="exp-head">
+        <h2 class="section-title reveal">What I build for your business.</h2>
+        <p class="lede reveal">Three ways I plug into a team that needs an engineer, not another meeting.</p>
+        <a href="#process" class="text-link reveal">How an engagement runs <i class="ph-light ph-arrow-right" aria-hidden="true"></i></a>
       </div>
 
-      <ol class="pipeline" aria-label="Capstone development pipeline">
-        <li class="bezel reveal">
-          <div class="bezel-core step">
-            <i class="ph-light ph-database step-icon" aria-hidden="true"></i>
-            <h3>Training data</h3>
-            <p>A session-journal corpus across 12 tabletop game systems (fantasy, sci-fi, horror), with cleaning and formatting pipelines that made fine-tuning trustworthy.</p>
+      <div class="stack">
+        <article class="bezel stack-card">
+          <div class="bezel-core role">
+            <div class="role-top">
+              <h3>AI feature development</h3>
+              <span class="role-date">RAG &amp; orchestration</span>
+            </div>
+            <p>
+              I design and ship retrieval pipelines, multi-model orchestration, and agentic
+              tool-use systems, then build the evaluation harness that proves they work before
+              your users find out otherwise.
+            </p>
+            <ul>
+              <li>RAG architecture and hybrid retrieval</li>
+              <li>Multi-model orchestration (Claude, Gemini, OpenAI)</li>
+              <li>Agent evaluation and human-in-the-loop review</li>
+              <li>Local LLM hosting (Ollama, KoboldCpp)</li>
+            </ul>
+            <p class="service-proof">Currently own the evaluation framework behind BlytzPay's production AI agent.</p>
           </div>
-        </li>
-        <li class="bezel reveal">
-          <div class="bezel-core step">
-            <i class="ph-light ph-sliders-horizontal step-icon" aria-hidden="true"></i>
-            <h3>Fine-tuning</h3>
-            <p>LoRA fine-tune of Mistral 7B Instruct, merged and quantized to Q4 GGUF. A 4&nbsp;GB model that runs on consumer hardware, published on Hugging Face.</p>
+        </article>
+
+        <article class="bezel stack-card">
+          <div class="bezel-core role">
+            <div class="role-top">
+              <h3>Data engineering and BI</h3>
+              <span class="role-date">ETL &amp; BigQuery</span>
+            </div>
+            <p>
+              I build the ETL pipelines and BigQuery data models underneath the dashboards your
+              finance, risk, and product teams actually trust, then document every join so the
+              next engineer trusts it too.
+            </p>
+            <ul>
+              <li>BigQuery data modeling</li>
+              <li>ETL pipeline design</li>
+              <li>SQL (T-SQL, MySQL, PostgreSQL)</li>
+              <li>Data validation and reconciliation</li>
+            </ul>
+            <p class="service-proof">Validated roughly 150 table relationships in a production BigQuery data lake, now restructuring it into a medallion architecture.</p>
           </div>
-        </li>
-        <li class="bezel reveal">
-          <div class="bezel-core step">
-            <i class="ph-light ph-git-merge step-icon" aria-hidden="true"></i>
-            <h3>Hybrid RAG</h3>
-            <p>Semantic search (pgvector) fused with full-text keyword search via Reciprocal Rank Fusion. Embeddings handle paraphrase; keywords rescue the rare proper nouns they blur.</p>
+        </article>
+
+        <article class="bezel stack-card">
+          <div class="bezel-core role">
+            <div class="role-top">
+              <h3>Full-stack and backend contracting</h3>
+              <span class="role-date">APIs &amp; CI/CD</span>
+            </div>
+            <p>
+              Backend services, REST APIs, and GitHub Actions pipelines, scoped and shipped end
+              to end. I own reliability for clients who don't have a platform team behind them.
+            </p>
+            <ul>
+              <li>REST API design</li>
+              <li>GitHub Actions CI/CD</li>
+              <li>Google Cloud and Microsoft Azure</li>
+              <li>PostgreSQL and MongoDB</li>
+            </ul>
+            <p class="service-proof">Ongoing backend and SQL systems work for Common Thread's clients since 2024.</p>
           </div>
-        </li>
-        <li class="bezel reveal">
-          <div class="bezel-core step">
-            <i class="ph-light ph-crosshair step-icon" aria-hidden="true"></i>
-            <h3>Measured relevance</h3>
-            <p>The retrieval threshold is set by a labeled evaluation sweep, not guessed. When nothing relevant exists, the app labels its own reply as ungrounded instead of inventing.</p>
-          </div>
-        </li>
-        <li class="bezel reveal">
-          <div class="bezel-core step">
-            <i class="ph-light ph-scales step-icon" aria-hidden="true"></i>
-            <h3>Evaluation harness</h3>
-            <p>In-app comparison of the fine-tuned and base models with semantic-similarity scoring, plus a standalone retrieval benchmark. Quality is measured at both layers.</p>
-          </div>
-        </li>
-        <li class="bezel reveal">
-          <div class="bezel-core step">
-            <i class="ph-light ph-eye step-icon" aria-hidden="true"></i>
-            <h3>Production and transparency</h3>
-            <p>Dockerized FastAPI, React, Postgres, and Ollama with token streaming and a per-answer retrieval trace. Every reply shows which records it drew from and why.</p>
-          </div>
-        </li>
-      </ol>
+        </article>
+      </div>
     </div>
 
     <div class="wrap">
@@ -261,18 +261,56 @@
         </blockquote>
         <figcaption>
           Orchestration can't compensate for a bad chunking strategy, and a well-trained model is
-          worthless if the interface buries the answer. Building Lorekeeper end to end with Claude Code
-          moved my time from boilerplate to architecture, retrieval design, and checking that the
-          output is actually correct.
+          worthless if the interface buries the answer. I learned that building Lorekeeper, my
+          open-source RAG project, end to end, and it shapes how I scope every AI engagement since.
         </figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- ================= SYSTEMS: gapless bento ================= -->
+  <!-- ================= PROCESS ================= -->
+  <section class="section" id="process">
+    <div class="wrap">
+      <h2 class="section-title section-title-center reveal">How an engagement runs.</h2>
+
+      <ol class="pipeline" aria-label="Engagement process">
+        <li class="bezel reveal">
+          <div class="bezel-core step">
+            <i class="ph-light ph-magnifying-glass step-icon" aria-hidden="true"></i>
+            <h3>Scope</h3>
+            <p>We start from your actual requirements, not a generic discovery deck. I scope the system, flag the risks, and give you a fixed plan before any code gets written.</p>
+          </div>
+        </li>
+        <li class="bezel reveal">
+          <div class="bezel-core step">
+            <i class="ph-light ph-code step-icon" aria-hidden="true"></i>
+            <h3>Build</h3>
+            <p>I build in the open: working increments, real commits, and Claude Code as a first-class part of the workflow, not a replacement for engineering judgment.</p>
+          </div>
+        </li>
+        <li class="bezel reveal">
+          <div class="bezel-core step">
+            <i class="ph-light ph-rocket-launch step-icon" aria-hidden="true"></i>
+            <h3>Ship</h3>
+            <p>Production means production: CI/CD, monitoring, and documentation, not a demo that only works on my laptop.</p>
+          </div>
+        </li>
+        <li class="bezel reveal">
+          <div class="bezel-core step">
+            <i class="ph-light ph-lifebuoy step-icon" aria-hidden="true"></i>
+            <h3>Support</h3>
+            <p>I stay reachable after launch. Most engagements include a support window, so the handoff is never a cliff.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= WORK: gapless bento ================= -->
   <section class="section" id="work">
     <div class="wrap">
-      <h2 class="section-title section-title-center reveal">AI systems, built end to end.</h2>
+      <h2 class="section-title section-title-center reveal">A few things I've shipped.</h2>
+      <p class="lede section-title-center reveal">Proof for the services above.</p>
 
       <div class="bento">
         <article class="bezel tile-ogden reveal">
@@ -341,142 +379,79 @@
     </div>
   </section>
 
-  <!-- ================= EXPERIENCE: stacking cards ================= -->
+  <!-- ================= EXPERIENCE: condensed timeline ================= -->
   <section class="section" id="experience">
-    <div class="wrap exp-grid">
-      <div class="exp-head">
-        <h2 class="section-title reveal">Where it's been applied.</h2>
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title reveal">Where this has been applied.</h2>
         <a href="https://linkedin.com/in/hsmith-dev" target="_blank" rel="noopener" class="text-link reveal"><i class="ph-light ph-linkedin-logo" aria-hidden="true"></i>Full history on LinkedIn</a>
       </div>
 
-      <div class="stack">
-        <article class="bezel stack-card">
-          <div class="bezel-core role">
-            <div class="role-top">
+      <div class="timeline">
+        <article class="bezel reveal">
+          <div class="bezel-core timeline-row">
+            <div class="timeline-top">
               <div>
-                <h3>Business Intelligence Analyst</h3>
-                <p class="role-org">Blytz</p>
+                <h3>Business Intelligence Analyst, Data Intelligence &amp; AI</h3>
+                <p class="timeline-org">BlytzPay</p>
               </div>
-              <span class="role-date">Nov 2025 - Present</span>
+              <span class="timeline-date">Nov 2025 - Present</span>
             </div>
-            <ul>
-              <li>Deliver BigQuery-backed pipelines and dashboards that turn raw enterprise data into decision-ready outputs for executives.</li>
-              <li>Integrate partner data, including HubSpot, through ETL pipelines that centralize reporting.</li>
-              <li>Keep Betzy, Blytz's production AI agent, accurate through response validation, query correction, and human-in-the-loop oversight.</li>
-              <li>Work with the AI team to launch capabilities like user-built dashboards from training and payment processors.</li>
-              <li>Speed up complex queries with Claude Code, and run deep-dive analysis in Python and Jupyter.</li>
-            </ul>
+            <p class="timeline-summary">Build the BigQuery models and dashboards Finance, Risk, and Product run on, and own the evaluation framework for BlytzPay's production AI agent.</p>
           </div>
         </article>
 
-        <article class="bezel stack-card">
-          <div class="bezel-core role">
-            <div class="role-top">
+        <article class="bezel reveal">
+          <div class="bezel-core timeline-row">
+            <div class="timeline-top">
+              <div>
+                <h3>AI &amp; Software Engineer, Technical Consultant</h3>
+                <p class="timeline-org">HSmithDev LLC</p>
+              </div>
+              <span class="timeline-date">Feb 2025 - Present</span>
+            </div>
+            <p class="timeline-summary">Scope, build, and ship software for businesses of all sizes, owning the full lifecycle from requirements to production. Consulting and AI workflow training for organizations including the PROG Development Center and Acord.AI, and subject-matter expert for Western Governors University's B.S. in Data Analytics with AI.</p>
+          </div>
+        </article>
+
+        <article class="bezel reveal">
+          <div class="bezel-core timeline-row">
+            <div class="timeline-top">
               <div>
                 <h3>Software and IT Services</h3>
-                <p class="role-org">Common Thread</p>
+                <p class="timeline-org">Common Thread</p>
               </div>
-              <span class="role-date">Mar 2024 - Present</span>
+              <span class="timeline-date">Mar 2024 - Present</span>
             </div>
-            <ul>
-              <li>Build and maintain backend services and SQL systems for a variety of clients, owning reliability with no platform team behind me.</li>
-            </ul>
+            <p class="timeline-summary">Backend services and SQL systems for a variety of clients, owning reliability with no platform team behind me.</p>
           </div>
         </article>
 
-        <article class="bezel stack-card">
-          <div class="bezel-core role">
-            <div class="role-top">
+        <article class="bezel reveal">
+          <div class="bezel-core timeline-row">
+            <div class="timeline-top">
               <div>
-                <h3>Data Analyst and AI Trainer</h3>
-                <p class="role-org">Salt Lake Community College</p>
+                <h3>Data Analyst Coordinator &amp; AI Workforce Trainer</h3>
+                <p class="timeline-org">Salt Lake Community College</p>
               </div>
-              <span class="role-date">May 2023 - Nov 2025</span>
+              <span class="timeline-date">May 2023 - Nov 2025</span>
             </div>
-            <ul>
-              <li>Applied data science principles (sanitization, ETL, model training) in Jupyter, and engineered SQL and JavaScript visualizations.</li>
-            </ul>
+            <p class="timeline-summary">SQL and JavaScript dashboards for stakeholder reporting, plus lead instructor for "AI @ Work," a workforce training series on prompt engineering and practical AI adoption.</p>
           </div>
         </article>
 
-        <article class="bezel stack-card">
-          <div class="bezel-core role">
-            <div class="role-top">
+        <article class="bezel reveal">
+          <div class="bezel-core timeline-row">
+            <div class="timeline-top">
               <div>
                 <h3>Earlier technical roles</h3>
-                <p class="role-org">Hill Air Force Base, Instructure, Microsoft, Control4</p>
+                <p class="timeline-org">Instructure, Control4, Education at Work</p>
               </div>
-              <span class="role-date">2015 - 2023</span>
+              <span class="timeline-date">2015 - 2021</span>
             </div>
-            <ul>
-              <li>Software development, data, and systems support across enterprise and defense environments.</li>
-            </ul>
+            <p class="timeline-summary">SaaS support for the Canvas LMS, IT systems administration, and Microsoft Office support.</p>
           </div>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= SKILLS: interactive index ================= -->
-  <section class="section" id="skills">
-    <div class="wrap">
-      <h2 class="section-title reveal">The stack, top to bottom.</h2>
-
-      <div class="skills reveal">
-        <div class="skill-tabs" role="tablist" aria-label="Skill areas">
-          <button role="tab" id="t-llm" aria-controls="p-llm" aria-selected="true">LLM and RAG</button>
-          <button role="tab" id="t-model" aria-controls="p-model" aria-selected="false" tabindex="-1">Modeling and evaluation</button>
-          <button role="tab" id="t-data" aria-controls="p-data" aria-selected="false" tabindex="-1">Data engineering</button>
-          <button role="tab" id="t-eng" aria-controls="p-eng" aria-selected="false" tabindex="-1">Engineering and deployment</button>
-        </div>
-
-        <div class="bezel skill-panels">
-          <div class="bezel-core">
-            <ul role="tabpanel" id="p-llm" aria-labelledby="t-llm" class="skill-panel is-active">
-              <li>RAG architecture design</li><li>Prompt engineering</li><li>Claude, Gemini, and OpenAI APIs</li><li>Ollama and KoboldCpp</li><li>Agentic tool-use orchestration</li>
-            </ul>
-            <ul role="tabpanel" id="p-model" aria-labelledby="t-model" class="skill-panel" hidden>
-              <li>TensorFlow</li><li>PyTorch</li><li>ML.NET</li><li>Classification models</li><li>Human-in-the-loop evaluation</li>
-            </ul>
-            <ul role="tabpanel" id="p-data" aria-labelledby="t-data" class="skill-panel" hidden>
-              <li>ETL pipeline design</li><li>Data sanitization</li><li>Feature preparation</li><li>SQL and BigQuery</li><li>Python, pandas, Jupyter</li>
-            </ul>
-            <ul role="tabpanel" id="p-eng" aria-labelledby="t-eng" class="skill-panel" hidden>
-              <li>Python, JavaScript, C#</li><li>REST API design</li><li>GitHub Actions CI/CD</li><li>Google Cloud and AWS</li><li>Linux</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= TEACHING ================= -->
-  <section class="section" id="teaching">
-    <div class="wrap">
-      <h2 class="section-title section-title-center reveal">Teaching AI, and building it into your product.</h2>
-      <div class="offers">
-        <div class="bezel reveal">
-          <div class="bezel-core offer">
-            <i class="ph-light ph-chalkboard-teacher offer-icon" aria-hidden="true"></i>
-            <h3>Teaching and training</h3>
-            <p>
-              Years as an AI Trainer at Salt Lake Community College taught me how to make RAG, LLM
-              orchestration, and applied ML approachable. I bring that to workshops, mentorship, and
-              training for teams new to them.
-            </p>
-          </div>
-        </div>
-        <div class="bezel reveal">
-          <div class="bezel-core offer">
-            <i class="ph-light ph-circuitry offer-icon" aria-hidden="true"></i>
-            <h3>AI feature development</h3>
-            <p>
-              I build AI capabilities into existing software: RAG search, LLM orchestration, evaluation
-              pipelines, and the data infrastructure that keeps AI features trustworthy in production,
-              not just in a demo.
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -485,8 +460,8 @@
   <section class="contact" id="contact">
     <div class="contact-bg" aria-hidden="true"><span class="orb orb-a"></span><span class="orb orb-b"></span></div>
     <div class="wrap contact-inner">
-      <p class="pill reveal">Open to AI development and teaching</p>
-      <h2 class="contact-title reveal">Have a project, class, or team to talk about?</h2>
+      <p class="pill reveal"><span class="live-dot" aria-hidden="true"></span>Open to new engagements</p>
+      <h2 class="contact-title reveal">Have a project for your business?</h2>
       <a class="contact-email reveal" href="mailto:hello@harrisonsmith.ai">hello@harrisonsmith.ai</a>
       <div class="contact-links reveal">
         <a href="https://linkedin.com/in/hsmith-dev" target="_blank" rel="noopener" class="btn btn-glass">
@@ -499,7 +474,7 @@
           Résumé <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-file-pdf"></i></span>
         </a>
       </div>
-      <p class="contact-note reveal">Based in Ogden, Utah. Remote or local.</p>
+      <p class="contact-note reveal">HSmithDev LLC. Based in Ogden, Utah. Remote or local.</p>
     </div>
   </section>
 
@@ -507,7 +482,7 @@
 
 <footer class="footer">
   <div class="wrap footer-inner">
-    <span>© <span id="year">2026</span> Harrison Smith</span>
+    <span>© <span id="year">2026</span> HSmithDev LLC</span>
     <span>Designed and built with Claude Code.</span>
   </div>
 </footer>
