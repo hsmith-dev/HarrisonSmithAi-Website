@@ -1,17 +1,17 @@
 # HarrisonSmith.ai
 
-Personal portfolio for Harrison Smith — AI Engineer & Educator. Static
-HTML/CSS/JS, no build step, designed to host directly on GitHub Pages with
-the custom domain `harrisonsmith.ai`.
+Site for Harrison Smith's contract AI and data engineering practice,
+operating as HSmithDev LLC. Static HTML/CSS/JS, no build step, designed to
+host directly on GitHub Pages with the custom domain `harrisonsmith.ai`.
 
 ## Structure
 
 ```
-index.html        Single-page site (Hero, About, Capstone, Systems Built,
-                   Experience, Skills, Teaching, Contact)
+index.html        Single-page site (Hero, About, Services, Process, Work,
+                   Experience, Contact)
 css/style.css      Design system + layout
-js/main.js         Menu, skills tabs, GSAP scroll choreography (loaded
-                   from cdnjs; the page stays fully readable without it)
+js/main.js         Menu, GSAP scroll choreography (loaded from cdnjs; the
+                   page stays fully readable without it)
 assets/            Resume PDF, favicon, og-image.png, work/ screenshots
 404.html           Branded not-found page (served by GitHub Pages)
 CNAME              Custom domain for GitHub Pages

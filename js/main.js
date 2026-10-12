@@ -49,30 +49,6 @@
     document.querySelectorAll('main section[id]').forEach((s) => obs.observe(s));
   }
 
-  /* ---------- Skills tabs (roving tabindex) ---------- */
-  const tabs = [...document.querySelectorAll('.skill-tabs [role="tab"]')];
-  const selectTab = (tab, focus) => {
-    tabs.forEach((t) => {
-      const on = t === tab;
-      t.setAttribute('aria-selected', String(on));
-      t.tabIndex = on ? 0 : -1;
-      const panel = document.getElementById(t.getAttribute('aria-controls'));
-      panel.hidden = !on;
-      panel.classList.toggle('is-active', on);
-    });
-    if (focus) tab.focus();
-  };
-  tabs.forEach((tab, i) => {
-    tab.addEventListener('click', () => selectTab(tab));
-    tab.addEventListener('mouseenter', () => { if (matchMedia('(hover: hover)').matches) selectTab(tab); });
-    tab.addEventListener('keydown', (e) => {
-      const d = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e.key];
-      if (!d) return;
-      e.preventDefault();
-      selectTab(tabs[(i + d + tabs.length) % tabs.length], true);
-    });
-  });
-
   /* ---------- Split text into masked words ---------- */
   const splitWords = (el, cls) => {
     const walk = (node) => {
@@ -118,10 +94,9 @@
 
   const ease = 'expo.out';
 
-  // Hero entrance: pill, masked words, then copy and actions
+  // Hero entrance: masked words, then copy and actions
   gsap.timeline({ defaults: { ease } })
-    .to('.hero-pill', { opacity: 1, y: 0, duration: 1 })
-    .to('.hero-title .w-in', { y: 0, duration: 1.3, stagger: 0.06 }, '-=0.8')
+    .to('.hero-title .w-in', { y: 0, duration: 1.3, stagger: 0.06 })
     .to('.hero-sub, .hero-actions', { opacity: 1, y: 0, duration: 1.1, stagger: 0.1 }, '-=0.9')
     .from('.stage-frame', { opacity: 0, y: 120, duration: 1.6 }, '-=0.9');
 
@@ -156,7 +131,7 @@
     scrollTrigger: { trigger: '.tile-ogden', start: 'top 85%', end: 'center 60%', scrub: 0.6 },
   });
 
-  // Experience: each card recedes as the next one stacks onto it
+  // Services: each card recedes as the next one stacks onto it
   mm.add('(min-width: 768px)', () => {
     const cards = gsap.utils.toArray('.stack-card');
     cards.forEach((card, i) => {
