@@ -97,18 +97,9 @@
   // Hero entrance: masked words, then copy and actions
   gsap.timeline({ defaults: { ease } })
     .to('.hero-title .w-in', { y: 0, duration: 1.3, stagger: 0.06 })
-    .to('.hero-sub, .hero-actions', { opacity: 1, y: 0, duration: 1.1, stagger: 0.1 }, '-=0.9')
-    .from('.stage-frame', { opacity: 0, y: 120, duration: 1.6 }, '-=0.9');
-
-  const mm = gsap.matchMedia();
-
-  // Screenshot tilts flat as the hero scrolls away (desktop only)
-  mm.add('(min-width: 768px)', () => {
-    gsap.to('.stage-frame', {
-      rotateX: 0, scale: 1, ease: 'none',
-      scrollTrigger: { trigger: '.hero-stage', start: 'top 85%', end: 'top 15%', scrub: 0.6 },
-    });
-  });
+    .to('.hero-sub, .hero-actions, .hero-stack', { opacity: 1, y: 0, duration: 1.1, stagger: 0.08 }, '-=0.9')
+    .from('.stage-frame', { opacity: 0, y: 120, duration: 1.6 }, '-=0.9')
+    .from('[data-chip]', { opacity: 0, y: 24, scale: 0.94, duration: 0.9 }, '-=0.6');
 
   // Statement: words brighten in sequence while scrolling
   if (statement) {
@@ -130,21 +121,6 @@
     gsap.fromTo(shot, { scale: 0.88, opacity: 0.4, transformOrigin: '0% 100%' }, {
       scale: 1, opacity: 1, ease: 'none',
       scrollTrigger: { trigger: shot.closest('article'), start: 'top 85%', end: 'center 60%', scrub: 0.6 },
-    });
-  });
-
-  // Services: each card recedes as the next one stacks onto it
-  mm.add('(min-width: 768px)', () => {
-    const cards = gsap.utils.toArray('.stack-card');
-    cards.forEach((card, i) => {
-      card.style.setProperty('--i', i);
-      const next = cards[i + 1];
-      if (!next) return;
-      // Fade fully so a taller card never shows beneath a shorter one
-      gsap.to(card, {
-        scale: 0.92, opacity: 0, ease: 'none',
-        scrollTrigger: { trigger: next, start: 'top 75%', end: () => `top ${120 + (i + 1) * 22}px`, scrub: 0.5 },
-      });
     });
   });
 

@@ -61,55 +61,47 @@
 
 <main id="main">
 
-  <!-- ================= HERO ================= -->
+  <!-- ================= HERO: asymmetric split, no center bias ================= -->
   <section class="hero" id="home">
-    <div class="hero-bg" aria-hidden="true">
-      <span class="orb orb-a"></span>
-      <span class="orb orb-b"></span>
-      <span class="orb orb-c"></span>
-      <span class="hero-grid-lines"></span>
-    </div>
+    <span class="hero-mark" aria-hidden="true">H</span>
 
-    <div class="wrap hero-inner">
-      <h1 class="hero-title" data-split>AI and data systems, <em>built to ship.</em></h1>
-      <p class="hero-sub" data-hero>
-        I'm Harrison Smith, a contract AI and data engineer. I scope, build, and
-        ship production systems for businesses, not demos.
-      </p>
-      <div class="hero-actions" data-hero>
-        <a href="mailto:hello@harrisonsmith.ai" class="btn btn-solid">
-          Email me
-          <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-arrow-up-right"></i></span>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <h1 class="hero-title" data-split>AI and data systems, <em>built to ship.</em></h1>
+        <p class="hero-sub" data-hero>
+          I'm Harrison Smith, a contract AI and data engineer. I scope, build, and
+          ship production systems for businesses, not demos.
+        </p>
+        <div class="hero-actions" data-hero>
+          <a href="mailto:hello@harrisonsmith.ai" class="btn btn-solid">
+            Email me
+            <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-arrow-up-right"></i></span>
+          </a>
+          <a href="#services" class="btn btn-glass">
+            See services
+            <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-arrow-down"></i></span>
+          </a>
+        </div>
+        <p class="hero-stack" data-hero>RAG &amp; orchestration&nbsp;&middot;&nbsp;BigQuery &amp; ETL&nbsp;&middot;&nbsp;APIs &amp; CI/CD</p>
+      </div>
+
+      <div class="hero-visual">
+        <a class="bezel stage-frame" id="stageFrame" href="https://github.com/hsmith-dev/ogden-agents" target="_blank" rel="noopener" aria-label="Ogden Agents, a recent build on GitHub">
+          <div class="bezel-core">
+            <div class="stage-bar" aria-hidden="true"><em>Recent build</em></div>
+            <img src="assets/work/ogden.jpg" width="2160" height="1350"
+                 alt="Ogden Agents' chat view: a project sidebar showing which chats are working or waiting, beside a permission card where Claude Code asks to run npm test.">
+          </div>
         </a>
-        <a href="#services" class="btn btn-glass">
-          See services
-          <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-arrow-down"></i></span>
-        </a>
+        <div class="bezel hero-chip" data-chip>
+          <div class="bezel-core hero-chip-core">
+            <span class="fact-num">10+</span>
+            <span class="fact-label">years combined technical experience</span>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="wrap hero-stage">
-      <a class="bezel stage-frame" id="stageFrame" href="https://github.com/hsmith-dev/ogden-agents" target="_blank" rel="noopener" aria-label="Ogden Agents, a recent build on GitHub">
-        <div class="bezel-core">
-          <div class="stage-bar" aria-hidden="true"><em>Recent build</em></div>
-          <img src="assets/work/ogden.jpg" width="2160" height="1350"
-               alt="Ogden Agents' chat view: a project sidebar showing which chats are working or waiting, beside a permission card where Claude Code asks to run npm test.">
-        </div>
-      </a>
-    </div>
   </section>
-
-  <!-- ================= MARQUEE ================= -->
-  <div class="marquee" aria-label="Core stack">
-    <div class="marquee-track">
-      <ul>
-        <li>Retrieval-augmented generation</li><li>Multi-agent orchestration</li><li>BigQuery and ETL</li><li>PostgreSQL and pgvector</li><li>Ollama and local LLMs</li><li>Evaluation harnesses</li><li>FastAPI</li><li>GitHub Actions CI/CD</li><li>LoRA fine-tuning</li>
-      </ul>
-      <ul aria-hidden="true">
-        <li>Retrieval-augmented generation</li><li>Multi-agent orchestration</li><li>BigQuery and ETL</li><li>PostgreSQL and pgvector</li><li>Ollama and local LLMs</li><li>Evaluation harnesses</li><li>FastAPI</li><li>GitHub Actions CI/CD</li><li>LoRA fine-tuning</li>
-      </ul>
-    </div>
-  </div>
 
   <!-- ================= ABOUT ================= -->
   <section class="section" id="about">
@@ -145,19 +137,13 @@
         </div>
 
         <div class="facts">
-          <div class="bezel reveal">
-            <div class="bezel-core fact">
-              <span class="fact-num">10+</span>
-              <span class="fact-label">years of combined technical experience</span>
-            </div>
-          </div>
           <a class="bezel fact-link reveal" href="https://github.com/hsmith-dev" target="_blank" rel="noopener">
             <div class="bezel-core fact">
               <i class="ph-light ph-github-logo fact-icon" aria-hidden="true"></i>
               <span class="fact-label">More projects and source on GitHub <i class="ph-light ph-arrow-up-right" aria-hidden="true"></i></span>
             </div>
           </a>
-          <div class="bezel facts-wide reveal">
+          <div class="bezel reveal">
             <div class="bezel-core edu">
               <div class="edu-row">
                 <span class="edu-year">2026</span>
@@ -189,66 +175,75 @@
         <a href="#process" class="text-link reveal">How an engagement runs <i class="ph-light ph-arrow-right" aria-hidden="true"></i></a>
       </div>
 
-      <div class="stack">
-        <article class="bezel stack-card">
-          <div class="bezel-core role">
-            <div class="role-top">
-              <h3>AI feature development</h3>
-              <span class="role-date">RAG &amp; orchestration</span>
+      <div class="services-list">
+        <article class="bezel service-row service-row-feature reveal">
+          <div class="bezel-core service">
+            <span class="service-index">01</span>
+            <div class="service-body">
+              <div class="role-top">
+                <h3>AI feature development</h3>
+                <span class="role-date">RAG &amp; orchestration</span>
+              </div>
+              <p>
+                I design and ship retrieval pipelines, multi-model orchestration, and agentic
+                tool-use systems, then build the evaluation harness that proves they work before
+                your users find out otherwise.
+              </p>
+              <ul>
+                <li>RAG architecture and hybrid retrieval</li>
+                <li>Multi-model orchestration (Claude, Gemini, OpenAI)</li>
+                <li>Agent evaluation and human-in-the-loop review</li>
+                <li>Local LLM hosting (Ollama, KoboldCpp)</li>
+              </ul>
+              <p class="service-proof">Currently own the evaluation framework behind BlytzPay's production AI agent.</p>
             </div>
-            <p>
-              I design and ship retrieval pipelines, multi-model orchestration, and agentic
-              tool-use systems, then build the evaluation harness that proves they work before
-              your users find out otherwise.
-            </p>
-            <ul>
-              <li>RAG architecture and hybrid retrieval</li>
-              <li>Multi-model orchestration (Claude, Gemini, OpenAI)</li>
-              <li>Agent evaluation and human-in-the-loop review</li>
-              <li>Local LLM hosting (Ollama, KoboldCpp)</li>
-            </ul>
-            <p class="service-proof">Currently own the evaluation framework behind BlytzPay's production AI agent.</p>
           </div>
         </article>
 
-        <article class="bezel stack-card">
-          <div class="bezel-core role">
-            <div class="role-top">
-              <h3>Data engineering and BI</h3>
-              <span class="role-date">ETL &amp; BigQuery</span>
+        <article class="bezel service-row reveal">
+          <div class="bezel-core service">
+            <span class="service-index">02</span>
+            <div class="service-body">
+              <div class="role-top">
+                <h3>Data engineering and BI</h3>
+                <span class="role-date">ETL &amp; BigQuery</span>
+              </div>
+              <p>
+                I build the ETL pipelines and BigQuery data models underneath the dashboards your
+                finance, risk, and product teams actually trust, then document every join so the
+                next engineer trusts it too.
+              </p>
+              <ul>
+                <li>BigQuery data modeling</li>
+                <li>ETL pipeline design</li>
+                <li>SQL (T-SQL, MySQL, PostgreSQL)</li>
+                <li>Data validation and reconciliation</li>
+              </ul>
+              <p class="service-proof">Validated roughly 150 table relationships in a production BigQuery data lake, now restructuring it into a medallion architecture.</p>
             </div>
-            <p>
-              I build the ETL pipelines and BigQuery data models underneath the dashboards your
-              finance, risk, and product teams actually trust, then document every join so the
-              next engineer trusts it too.
-            </p>
-            <ul>
-              <li>BigQuery data modeling</li>
-              <li>ETL pipeline design</li>
-              <li>SQL (T-SQL, MySQL, PostgreSQL)</li>
-              <li>Data validation and reconciliation</li>
-            </ul>
-            <p class="service-proof">Validated roughly 150 table relationships in a production BigQuery data lake, now restructuring it into a medallion architecture.</p>
           </div>
         </article>
 
-        <article class="bezel stack-card">
-          <div class="bezel-core role">
-            <div class="role-top">
-              <h3>Full-stack and backend contracting</h3>
-              <span class="role-date">APIs &amp; CI/CD</span>
+        <article class="bezel service-row reveal">
+          <div class="bezel-core service">
+            <span class="service-index">03</span>
+            <div class="service-body">
+              <div class="role-top">
+                <h3>Full-stack and backend contracting</h3>
+                <span class="role-date">APIs &amp; CI/CD</span>
+              </div>
+              <p>
+                Backend services, REST APIs, and GitHub Actions pipelines, scoped and shipped end
+                to end. I own reliability for clients who don't have a platform team behind them.
+              </p>
+              <ul>
+                <li>REST API design</li>
+                <li>GitHub Actions CI/CD</li>
+                <li>Google Cloud and Microsoft Azure</li>
+                <li>PostgreSQL and MongoDB</li>
+              </ul>
+              <p class="service-proof">Ongoing backend and SQL systems work for Common Thread's clients since 2024.</p>
             </div>
-            <p>
-              Backend services, REST APIs, and GitHub Actions pipelines, scoped and shipped end
-              to end. I own reliability for clients who don't have a platform team behind them.
-            </p>
-            <ul>
-              <li>REST API design</li>
-              <li>GitHub Actions CI/CD</li>
-              <li>Google Cloud and Microsoft Azure</li>
-              <li>PostgreSQL and MongoDB</li>
-            </ul>
-            <p class="service-proof">Ongoing backend and SQL systems work for Common Thread's clients since 2024.</p>
           </div>
         </article>
       </div>
@@ -273,34 +268,30 @@
     <div class="wrap">
       <h2 class="section-title section-title-center reveal">How an engagement runs.</h2>
 
-      <ol class="pipeline" aria-label="Engagement process">
-        <li class="bezel reveal">
-          <div class="bezel-core step">
-            <i class="ph-light ph-magnifying-glass step-icon" aria-hidden="true"></i>
-            <h3>Scope</h3>
-            <p>We start from your actual requirements, not a generic discovery deck. I scope the system, flag the risks, and give you a fixed plan before any code gets written.</p>
-          </div>
+      <ol class="stepper" aria-label="Engagement process">
+        <li class="step-node reveal">
+          <span class="step-num">01</span>
+          <i class="ph-light ph-magnifying-glass" aria-hidden="true"></i>
+          <h3>Scope</h3>
+          <p>We start from your actual requirements, not a generic discovery deck. I scope the system, flag the risks, and give you a fixed plan before any code gets written.</p>
         </li>
-        <li class="bezel reveal">
-          <div class="bezel-core step">
-            <i class="ph-light ph-code step-icon" aria-hidden="true"></i>
-            <h3>Build</h3>
-            <p>I build in the open: working increments, real commits, and Claude Code as a first-class part of the workflow, not a replacement for engineering judgment.</p>
-          </div>
+        <li class="step-node reveal">
+          <span class="step-num">02</span>
+          <i class="ph-light ph-code" aria-hidden="true"></i>
+          <h3>Build</h3>
+          <p>I build in the open: working increments, real commits, and Claude Code as a first-class part of the workflow, not a replacement for engineering judgment.</p>
         </li>
-        <li class="bezel reveal">
-          <div class="bezel-core step">
-            <i class="ph-light ph-rocket-launch step-icon" aria-hidden="true"></i>
-            <h3>Ship</h3>
-            <p>Production means production: CI/CD, monitoring, and documentation, not a demo that only works on my laptop.</p>
-          </div>
+        <li class="step-node reveal">
+          <span class="step-num">03</span>
+          <i class="ph-light ph-rocket-launch" aria-hidden="true"></i>
+          <h3>Ship</h3>
+          <p>Production means production: CI/CD, monitoring, and documentation, not a demo that only works on my laptop.</p>
         </li>
-        <li class="bezel reveal">
-          <div class="bezel-core step">
-            <i class="ph-light ph-lifebuoy step-icon" aria-hidden="true"></i>
-            <h3>Support</h3>
-            <p>I stay reachable after launch. Most engagements include a support window, so the handoff is never a cliff.</p>
-          </div>
+        <li class="step-node reveal">
+          <span class="step-num">04</span>
+          <i class="ph-light ph-lifebuoy" aria-hidden="true"></i>
+          <h3>Support</h3>
+          <p>I stay reachable after launch. Most engagements include a support window, so the handoff is never a cliff.</p>
         </li>
       </ol>
     </div>
@@ -478,7 +469,7 @@
 
   <!-- ================= CONTACT ================= -->
   <section class="contact" id="contact">
-    <div class="contact-bg" aria-hidden="true"><span class="orb orb-a"></span><span class="orb orb-b"></span></div>
+    <div class="contact-bg" aria-hidden="true"></div>
     <div class="wrap contact-inner">
       <p class="pill reveal"><span class="live-dot" aria-hidden="true"></span>Open to new engagements</p>
       <h2 class="contact-title reveal">Have a project for your business?</h2>
