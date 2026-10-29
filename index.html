@@ -3,27 +3,67 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Harrison Smith | Contract AI &amp; Data Engineering</title>
-<meta name="description" content="Harrison Smith, operating as HSmithDev LLC, is an independent contract engineer for AI features, data pipelines, and full-stack delivery. RAG, LLM orchestration, BigQuery, and production ownership for businesses that need to ship.">
+<title>Harrison Smith | AI &amp; Data Engineer</title>
+<meta name="description" content="Harrison Smith is an AI and data engineer: BI and AI agent evaluation work at a payments company, plus independent contract engineering as HSmithDev LLC. RAG, LLM orchestration, BigQuery, and production ownership for systems that need to ship.">
 <meta name="author" content="Harrison Smith">
 <meta name="color-scheme" content="dark">
 <meta name="theme-color" content="#07070a">
 
 <!-- Open Graph -->
-<meta property="og:title" content="Harrison Smith | Contract AI &amp; Data Engineering">
-<meta property="og:description" content="Independent contract engineer for AI features, data pipelines, and full-stack delivery. RAG, LLM orchestration, BigQuery, and production ownership for businesses that need to ship.">
+<meta property="og:title" content="Harrison Smith | AI &amp; Data Engineer">
+<meta property="og:description" content="AI and data engineer: BI and AI agent evaluation work at a payments company, plus independent contract engineering. RAG, LLM orchestration, BigQuery, and production ownership for systems that need to ship.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://harrisonsmith.ai">
 <meta property="og:image" content="https://harrisonsmith.ai/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Harrison Smith">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Harrison Smith | AI &amp; Data Engineer">
+<meta name="twitter:description" content="AI and data engineer: BI, AI agent evaluation, and a reporting platform built with Claude Code, Grok, and Codex.">
+<meta name="twitter:image" content="https://harrisonsmith.ai/assets/og-image.png">
+<link rel="canonical" href="https://harrisonsmith.ai/">
 
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/light/style.css">
-<link rel="preload" as="image" href="assets/work/ogden.jpg">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/platform.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Harrison Smith",
+  "url": "https://harrisonsmith.ai",
+  "image": "https://harrisonsmith.ai/assets/og-image.png",
+  "jobTitle": ["AI and Data Engineer", "Business Intelligence Analyst"],
+  "description": "AI and data engineer: BI and AI agent evaluation work at a payments company, independent contract engineering as HSmithDev LLC, and a reporting platform built with Claude Code, Grok, and Codex.",
+  "address": { "@type": "PostalAddress", "addressLocality": "Ogden", "addressRegion": "UT", "addressCountry": "US" },
+  "alumniOf": [
+    { "@type": "CollegeOrUniversity", "name": "Neumont University" },
+    { "@type": "CollegeOrUniversity", "name": "Weber State University" }
+  ],
+  "knowsAbout": ["Retrieval-augmented generation", "Multi-agent orchestration", "BigQuery", "ETL", "LLM evaluation", "PostgreSQL", "Claude Code"],
+  "sameAs": [
+    "https://github.com/hsmith-dev",
+    "https://linkedin.com/in/hsmith-dev"
+  ],
+  "worksFor": { "@type": "Organization", "name": "HSmithDev LLC" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Harrison Smith",
+  "url": "https://harrisonsmith.ai",
+  "author": { "@type": "Person", "name": "Harrison Smith" }
+}
+</script>
 </head>
 <body>
 
@@ -35,9 +75,9 @@
   <div class="nav-pill">
     <a href="#home" class="brand" aria-label="Harrison Smith, home">HS<span>.</span>dev</a>
     <nav class="nav" aria-label="Primary">
+      <a href="#platform">Platform</a>
       <a href="#about">About</a>
       <a href="#services">Services</a>
-      <a href="#process">Process</a>
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
     </nav>
@@ -50,9 +90,9 @@
 
 <div class="menu" id="menu" aria-hidden="true">
   <nav class="menu-links" aria-label="Mobile">
+    <a href="#platform">Platform</a>
     <a href="#about">About</a>
     <a href="#services">Services</a>
-    <a href="#process">Process</a>
     <a href="#work">Work</a>
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
@@ -73,27 +113,33 @@
     <div class="wrap hero-inner">
       <h1 class="hero-title" data-split>AI and data systems, <em>built to ship.</em></h1>
       <p class="hero-sub" data-hero>
-        I'm Harrison Smith, a contract AI and data engineer. I scope, build, and
-        ship production systems for businesses, not demos.
+        I'm Harrison Smith, an AI and data engineer. I scope, build, and
+        ship production systems, not demos.
       </p>
       <div class="hero-actions" data-hero>
         <a href="mailto:hello@harrisonsmith.ai" class="btn btn-solid">
           Email me
           <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-arrow-up-right"></i></span>
         </a>
-        <a href="#services" class="btn btn-glass">
-          See services
+        <a href="#platform" class="btn btn-glass">
+          See my work
           <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-arrow-down"></i></span>
         </a>
       </div>
     </div>
 
     <div class="wrap hero-stage">
-      <a class="bezel stage-frame" id="stageFrame" href="https://github.com/hsmith-dev/ogden-agents" target="_blank" rel="noopener" aria-label="Ogden Agents, a recent build on GitHub">
+      <a class="bezel stage-frame" id="stageFrame" href="platform.html" aria-label="Deckhand, the deck builder at the center of the reporting platform">
         <div class="bezel-core">
-          <div class="stage-bar" aria-hidden="true"><em>Recent build</em></div>
-          <img src="assets/work/ogden.jpg" width="2160" height="1350"
-               alt="Ogden Agents' chat view: a project sidebar showing which chats are working or waiting, beside a permission card where Claude Code asks to run npm test.">
+          <div class="stage-bar" aria-hidden="true"><em>Flagship build &middot; fictionalized data</em></div>
+          <div class="stage-preview" id="heroPreview">
+            <div class="stage-preview-top">
+              <span class="stage-app-name">Deckhand</span>
+              <span class="stage-app-sub">live embed &middot; auto-refreshing</span>
+            </div>
+            <div class="stat-row" id="heroStatRow"></div>
+            <div id="heroSpark"></div>
+          </div>
         </div>
       </a>
     </div>
@@ -111,6 +157,52 @@
     </div>
   </div>
 
+  <!-- ================= PLATFORM TEASER ================= -->
+  <section class="section" id="platform">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 class="section-title reveal">A reporting platform that replaced Tableau.</h2>
+        <a href="platform.html" class="text-link reveal">Explore all 15 apps <i class="ph-light ph-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <p class="lede reveal" style="margin-bottom:40px;">
+        15 internal BI apps I've built and shipped, reproduced here at a high level: the
+        real data, and most of what each app actually does, stay internal. What's below is
+        invented companies and numbers standing in for the real thing, enough to show how
+        Deckhand, the deck builder, embeds live views from the rest of the platform and
+        keeps them refreshed.
+      </p>
+
+      <div class="platform-stats">
+        <div class="bezel reveal"><div class="bezel-core platform-stat"><span class="fact-num">15</span><span class="fact-label">apps shipped and in active use</span></div></div>
+        <div class="bezel reveal"><div class="bezel-core platform-stat"><span class="fact-num">44</span><span class="fact-label">legacy Tableau workbooks retired</span></div></div>
+        <div class="bezel reveal"><div class="bezel-core platform-stat"><span class="fact-num">1</span><span class="fact-label">deck builder that auto-refreshes from the rest</span></div></div>
+        <div class="bezel reveal"><div class="bezel-core platform-stat"><span class="fact-num">3</span><span class="fact-label">AI coding agents in daily use: Claude Code, Grok, Codex</span></div></div>
+      </div>
+
+      <div class="case-grid" style="margin-top:14px;">
+        <a class="bezel case-card reveal" href="platform.html#deckhand">
+          <div class="bezel-core"><span class="case-tag">Flagship build</span><h3>Deckhand</h3><p>A deck builder that embeds and auto-refreshes live views from every app below.</p></div>
+        </a>
+        <a class="bezel case-card reveal" href="platform.html#apps">
+          <div class="bezel-core"><span class="case-tag">Leadership &middot; Ops</span><h3>Pulse</h3><p>The company-wide dashboard leadership checks every morning.</p></div>
+        </a>
+        <a class="bezel case-card reveal" href="platform.html#apps">
+          <div class="bezel-core"><span class="case-tag">Data platform</span><h3>Atlas</h3><p>A visual map of the warehouse, cross-checked against the AI agent's own memory of it.</p></div>
+        </a>
+        <a class="bezel case-card reveal" href="platform.html#apps">
+          <div class="bezel-core"><span class="case-tag">Sales</span><h3>Pipeline</h3><p>Rep and manager sales dashboard: pipeline, win/loss, activity, commissions.</p></div>
+        </a>
+      </div>
+
+      <div class="work-more reveal">
+        <a href="platform.html" class="btn btn-solid">
+          See the impact
+          <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-arrow-up-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ================= ABOUT ================= -->
   <section class="section" id="about">
     <div class="wrap">
@@ -123,18 +215,24 @@
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            I'm Harrison Smith, an independent AI and data engineer based in Ogden, Utah,
-            operating under <strong>HSmithDev LLC</strong>. My background is classic software
-            engineering: backend services, SQL systems, CI/CD pipelines. The last several years,
-            I've rebuilt that foundation around AI, with RAG pipelines, multi-model orchestration
-            across Claude, Gemini, and ChatGPT, local LLM hosting, and the data engineering that
-            makes any of it trustworthy.
+            I'm Harrison Smith, an AI and data engineer based in Ogden, Utah. My background is
+            classic software engineering: backend services, SQL systems, CI/CD pipelines. The
+            last several years, I've rebuilt that foundation around AI, with RAG pipelines,
+            multi-model orchestration across Claude, Gemini, and ChatGPT, local LLM hosting, and
+            the data engineering that makes any of it trustworthy.
           </p>
           <p>
-            Day to day, I'm the Business Intelligence Analyst at BlytzPay, a Series A payments
-            company, where I build the BigQuery models and dashboards Finance and Risk run on, and
-            own the evaluation framework for their production AI agent. I bring that same
-            production discipline to client work.
+            Day to day, I'm a Business Intelligence Analyst at a venture-backed payments company,
+            where I build the BigQuery models and dashboards Finance and Risk run on, and own the
+            evaluation framework for their production AI agent. I bring that same production
+            discipline to independent contract engineering through <strong>HSmithDev LLC</strong>.
+          </p>
+          <p>
+            That role is also where <a href="platform.html">the reporting platform</a> below comes
+            from: 15 internal BI apps, replacing a legacy Tableau stack, built with Claude Code,
+            Grok, and Codex on top of a data warehouse I know end to end. I've also contributed
+            training data and review to the company's internal AI agent, which gives those apps
+            natural-language context about that warehouse.
           </p>
           <p>
             My M.S. in Applied AI pushed me deep into the parts a bootcamp skips: model training
@@ -184,9 +282,9 @@
   <section class="section" id="services">
     <div class="wrap exp-grid">
       <div class="exp-head">
-        <h2 class="section-title reveal">What I build for your business.</h2>
-        <p class="lede reveal">Three ways I plug into a team that needs an engineer, not another meeting.</p>
-        <a href="#process" class="text-link reveal">How an engagement runs <i class="ph-light ph-arrow-right" aria-hidden="true"></i></a>
+        <h2 class="section-title reveal">What I build.</h2>
+        <p class="lede reveal">Three areas I go deep in, whether I'm joining a team full-time or brought in as a contract engineer.</p>
+        <a href="#process" class="text-link reveal">How I work <i class="ph-light ph-arrow-right" aria-hidden="true"></i></a>
       </div>
 
       <div class="stack">
@@ -207,7 +305,7 @@
               <li>Agent evaluation and human-in-the-loop review</li>
               <li>Local LLM hosting (Ollama, KoboldCpp)</li>
             </ul>
-            <p class="service-proof">Currently own the evaluation framework behind BlytzPay's production AI agent.</p>
+            <p class="service-proof">Currently own the evaluation framework behind a production AI agent at a venture-backed payments company.</p>
           </div>
         </article>
 
@@ -235,12 +333,12 @@
         <article class="bezel stack-card">
           <div class="bezel-core role">
             <div class="role-top">
-              <h3>Full-stack and backend contracting</h3>
+              <h3>Full-stack and backend engineering</h3>
               <span class="role-date">APIs &amp; CI/CD</span>
             </div>
             <p>
               Backend services, REST APIs, and GitHub Actions pipelines, scoped and shipped end
-              to end. I own reliability for clients who don't have a platform team behind them.
+              to end. I own reliability on teams that don't have a dedicated platform engineer.
             </p>
             <ul>
               <li>REST API design</li>
@@ -271,14 +369,14 @@
   <!-- ================= PROCESS ================= -->
   <section class="section" id="process">
     <div class="wrap">
-      <h2 class="section-title section-title-center reveal">How an engagement runs.</h2>
+      <h2 class="section-title section-title-center reveal">How I work.</h2>
 
-      <ol class="pipeline" aria-label="Engagement process">
+      <ol class="pipeline" aria-label="Working process">
         <li class="bezel reveal">
           <div class="bezel-core step">
             <i class="ph-light ph-magnifying-glass step-icon" aria-hidden="true"></i>
             <h3>Scope</h3>
-            <p>We start from your actual requirements, not a generic discovery deck. I scope the system, flag the risks, and give you a fixed plan before any code gets written.</p>
+            <p>I start from the actual requirements, not a generic discovery deck: scope the system, flag the risks, and lock a plan before any code gets written.</p>
           </div>
         </li>
         <li class="bezel reveal">
@@ -299,7 +397,7 @@
           <div class="bezel-core step">
             <i class="ph-light ph-lifebuoy step-icon" aria-hidden="true"></i>
             <h3>Support</h3>
-            <p>I stay reachable after launch. Most engagements include a support window, so the handoff is never a cliff.</p>
+            <p>I stay reachable after launch. On contract work that means a support window; on a team it means I don't disappear once something ships.</p>
           </div>
         </li>
       </ol>
@@ -309,8 +407,8 @@
   <!-- ================= WORK: gapless bento ================= -->
   <section class="section" id="work">
     <div class="wrap">
-      <h2 class="section-title section-title-center reveal">A few things I've shipped.</h2>
-      <p class="lede section-title-center reveal">Proof for the services above.</p>
+      <h2 class="section-title section-title-center reveal">Personal and open-source builds.</h2>
+      <p class="lede section-title-center reveal">Alongside the reporting platform above, proof for the services above.</p>
 
       <div class="bento">
         <article class="bezel tile-ogden reveal">
@@ -334,22 +432,34 @@
           </div>
         </article>
 
-        <article class="bezel tile-hermit reveal">
+        <article class="bezel tile-privasuite reveal">
           <div class="bezel-core tile">
             <div class="tile-copy">
-              <p class="flag">Coming soon to iOS</p>
-              <h3><a href="https://hermit.harrisonsmith.ai" target="_blank" rel="noopener" class="stretched">Hermit</a></h3>
-              <p class="tile-kind">Private voice notes with on-device AI</p>
+              <p class="flag">In active build</p>
+              <h3>PrivaSuite</h3>
+              <p class="tile-kind">Local-first AI apps for Mac and iOS</p>
               <p>
-                Records, transcribes with Whisper, summarizes, and pulls out tasks on iPhone and iPad.
-                Every step runs on the device's own chip, even in airplane mode.
+                A family of on-device apps that never phone home: a desktop assistant for reading,
+                workflow capture, and meetings, a PDF reader with synchronized narration, a meeting
+                recorder that transcribes and summarizes on-device, and a study companion that turns
+                notes into flashcards. One shared on-device engine, nothing sent to a server.
               </p>
-              <ul class="tags"><li>On-device LLM</li><li>Whisper</li><li>iOS</li></ul>
             </div>
-            <div class="tile-side-shot">
-              <img src="assets/work/hermit.jpg" width="2160" height="1350" loading="lazy"
-                   alt="The Hermit landing page: 'Your voice notes stay on your iPhone.', beside two iPhone screens showing a lecture recording summary and a task list.">
-            </div>
+            <ul class="priva-apps">
+              <li><i class="ph-light ph-robot" aria-hidden="true"></i>PrivaAssist</li>
+              <li><i class="ph-light ph-file-pdf" aria-hidden="true"></i>PrivaPage</li>
+              <li><i class="ph-light ph-users-three" aria-hidden="true"></i>PrivaMeet</li>
+              <li><i class="ph-light ph-cards" aria-hidden="true"></i>PrivaStudy</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="bezel tile-lorekeeper reveal">
+          <div class="bezel-core tile">
+            <i class="ph-light ph-scroll tile-icon" aria-hidden="true"></i>
+            <h3><a href="https://github.com/hsmith-dev/Lorekeeper.quest" target="_blank" rel="noopener" class="stretched">Lorekeeper</a></h3>
+            <p class="tile-kind">Graduate capstone, open source</p>
+            <p>A self-hosted AI campaign companion for tabletop RPGs: retrieval over your own journal, grounded answers, and a fine-tuned model, so nothing it tells you is hallucinated lore.</p>
           </div>
         </article>
 
@@ -366,6 +476,33 @@
             <i class="ph-light ph-git-branch tile-icon" aria-hidden="true"></i>
             <h3>CI/CD for ThunderBeast.Studio</h3>
             <p>GitHub Actions pipelines that compile and deploy production builds straight to a live site.</p>
+          </div>
+        </article>
+
+        <article class="bezel tile-crm reveal">
+          <div class="bezel-core tile">
+            <i class="ph-light ph-hammer tile-icon" aria-hidden="true"></i>
+            <h3>ContractorCRM</h3>
+            <p class="tile-kind">Personal project, source private</p>
+            <p>A multi-tenant CRM, AI reporting engine, and assistant sharing one backend, with agentic AI execution centralized behind a dedicated MCP server.</p>
+          </div>
+        </article>
+
+        <article class="bezel tile-aigen reveal">
+          <div class="bezel-core tile">
+            <i class="ph-light ph-film-strip tile-icon" aria-hidden="true"></i>
+            <h3>AI book &amp; video generator</h3>
+            <p class="tile-kind">Personal project, source private</p>
+            <p>Give it a premise and it writes a script or a book, keeps character art consistent across shots or pages, voices every line, and cuts the result into a video or a print-ready book. Entirely local models, no cloud APIs.</p>
+          </div>
+        </article>
+
+        <article class="bezel tile-nepali reveal">
+          <div class="bezel-core tile">
+            <i class="ph-light ph-translate tile-icon" aria-hidden="true"></i>
+            <h3>Learn Nepali</h3>
+            <p class="tile-kind">iOS &amp; Android, in development</p>
+            <p>A Nepali-language learning app with spaced-repetition practice, a content-authoring studio, and AI-assisted lesson generation.</p>
           </div>
         </article>
       </div>
@@ -393,11 +530,11 @@
             <div class="timeline-top">
               <div>
                 <h3>Business Intelligence Analyst, Data Intelligence &amp; AI</h3>
-                <p class="timeline-org">BlytzPay</p>
+                <p class="timeline-org">A venture-backed payments company</p>
               </div>
               <span class="timeline-date">Nov 2025 - Present</span>
             </div>
-            <p class="timeline-summary">Build the BigQuery models and dashboards Finance, Risk, and Product run on, and own the evaluation framework for BlytzPay's production AI agent.</p>
+            <p class="timeline-summary">Build the BigQuery models and dashboards Finance, Risk, and Product run on, ship the <a href="platform.html">reporting platform</a> that replaced its Tableau stack, and own the evaluation framework for its production AI agent.</p>
           </div>
         </article>
 
@@ -460,8 +597,8 @@
   <section class="contact" id="contact">
     <div class="contact-bg" aria-hidden="true"><span class="orb orb-a"></span><span class="orb orb-b"></span></div>
     <div class="wrap contact-inner">
-      <p class="pill reveal"><span class="live-dot" aria-hidden="true"></span>Open to new engagements</p>
-      <h2 class="contact-title reveal">Have a project for your business?</h2>
+      <p class="pill reveal"><span class="live-dot" aria-hidden="true"></span>Open to full-time roles and contract work</p>
+      <h2 class="contact-title reveal">Let's talk about what's next.</h2>
       <a class="contact-email reveal" href="mailto:hello@harrisonsmith.ai">hello@harrisonsmith.ai</a>
       <div class="contact-links reveal">
         <a href="https://linkedin.com/in/hsmith-dev" target="_blank" rel="noopener" class="btn btn-glass">
@@ -469,9 +606,6 @@
         </a>
         <a href="https://github.com/hsmith-dev" target="_blank" rel="noopener" class="btn btn-glass">
           GitHub <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-github-logo"></i></span>
-        </a>
-        <a href="assets/Harrison_Smith_Resume.pdf" target="_blank" class="btn btn-glass">
-          Résumé <span class="btn-icon" aria-hidden="true"><i class="ph-light ph-file-pdf"></i></span>
         </a>
       </div>
       <p class="contact-note reveal">HSmithDev LLC. Based in Ogden, Utah. Remote or local.</p>
@@ -489,6 +623,10 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="js/mock-data.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/hero-preview.js"></script>
+<script src="js/spotlight.js"></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>
